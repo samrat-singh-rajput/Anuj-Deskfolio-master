@@ -6,7 +6,7 @@ import App from './App.tsx'
 // Seed Anuj's GitHub as the "dev activity" link if the user hasn't set one yet.
 try {
   if (!localStorage.getItem('df-dev-activity-link')) {
-    localStorage.setItem('df-dev-activity-link', 'https://github.com/asrajputchauhan')
+    localStorage.setItem('df-dev-activity-link', 'https://github.com/samrat-singh-rajput')
   }
 } catch {
   /* localStorage unavailable */

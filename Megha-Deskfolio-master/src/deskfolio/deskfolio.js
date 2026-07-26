@@ -1085,7 +1085,7 @@ const Be = Mt.map((t) => ({ id: t.id, name: t.name })), Ye = (t) => /sticker-(cu
 ] }), m0 = (t) => /* @__PURE__ */ i("svg", { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", ...t, children: [
   /* @__PURE__ */ e("path", { d: "M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1" }),
   /* @__PURE__ */ e("path", { d: "M14 11a5 5 0 0 0-7.1 0l-2 2a5 5 0 0 0 7.1 7.1l1.1-1.1" })
-] }), He = "https://github.com/asrajputchauhan", ut = "df-dev-activity-link";
+] }), He = "https://github.com/samrat-singh-rajput", ut = "df-dev-activity-link";
 function g0(t) {
   const r = t.trim();
   return r ? /^[a-z][a-z0-9+.-]*:\/\//i.test(r) ? r : `https://${r}` : He;
@@ -2240,7 +2240,7 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
     /* @__PURE__ */ e("h3", { className: "df-hello", children: "selected work" }),
     /* @__PURE__ */ i("div", { className: "df-proj", children: [
       /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
-        /* @__PURE__ */ e($e, { href: "https://github.com/asrajputchauhan", variant: 0, children: "Blood Bank System" }),
+        /* @__PURE__ */ e($e, { href: "https://blood-bank-management-system-ecru.vercel.app/", variant: 0, children: "Blood Bank System" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Full-Stack Web App" })
       ] }),
       /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", placeholder: "describe it…", initial: "Developed a full-stack web application enabling donors, recipients, and blood banks to coordinate via centralized platform using React, Node.js, MongoDB and Gemini AI." })
@@ -2319,12 +2319,16 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
       }
     ),
     /* @__PURE__ */ i("ul", { className: "df-links", children: [
-      /* @__PURE__ */ e("li", { children: /* @__PURE__ */ i("a", { className: "df-link", href: "https://github.com/asrajputchauhan", target: "_blank", rel: "noreferrer", children: [
+      /* @__PURE__ */ e("li", { children: /* @__PURE__ */ i("a", { className: "df-link", href: "https://github.com/samrat-singh-rajput", target: "_blank", rel: "noreferrer", children: [
         /* @__PURE__ */ e(A0, {}),
         " GitHub"
       ] }) }),
-      /* @__PURE__ */ e("li", { children: /* @__PURE__ */ i("a", { className: "df-link", href: "https://linkedin.com/in/anuj-singh-rajput", target: "_blank", rel: "noreferrer", children: [
-        /* @__PURE__ */ e(T0, {}),
+      /* @__PURE__ */ e("li", { children: /* @__PURE__ */ i("a", { className: "df-link", href: "https://www.linkedin.com/in/samrat-singh-rajput", target: "_blank", rel: "noreferrer", children: [
+        /* @__PURE__ */ i("svg", { width: 16, height: 16, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", className: "df-icon", children: [
+          /* @__PURE__ */ e("path", { d: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" }),
+          /* @__PURE__ */ e("rect", { x: 2, y: 9, width: 4, height: 12 }),
+          /* @__PURE__ */ e("circle", { cx: 4, cy: 4, r: 2 })
+        ] }),
         " LinkedIn"
       ] }) }),
       /* @__PURE__ */ e("li", { children: /* @__PURE__ */ i("a", { className: "df-link", href: "mailto:asrajputchauhan@gmail.com", children: [
