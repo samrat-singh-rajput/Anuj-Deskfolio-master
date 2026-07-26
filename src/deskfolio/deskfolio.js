@@ -2183,7 +2183,7 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
         /* @__PURE__ */ e(ue, { className: "df-name", placeholder: "your name", initial: "Anuj Singh Rajput" }),
         /* @__PURE__ */ i("span", { className: "df-role", children: [
           /* @__PURE__ */ e(pe, {}),
-          " frontend developer · Noida"
+          " B.Tech Computer Engineering"
         ] })
       ] })
     ] }),
@@ -2192,7 +2192,7 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
       {
         className: "df-edit--body",
         placeholder: "a little about you…",
-        initial: "I build clean, responsive digital experiences with HTML, JavaScript, SQL & SAP — and anime tribute websites the internet keeps starring. I don't code anime, I watch anime ✨"
+        initial: "Final-year Computer Engineering student with hands-on experience building full-stack applications. Passionate about AI-driven solutions, object-oriented programming, and solving complex problems with modern tech ✨"
       }
     ) }),
     /* @__PURE__ */ e("p", { className: "df-label df-label--push", children: "currently…" }),
@@ -2214,12 +2214,13 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
         " i build with"
       ] }),
       /* @__PURE__ */ i("ul", { className: "df-tags", children: [
-        /* @__PURE__ */ e("li", { className: "df-tag", children: "HTML" }),
-        /* @__PURE__ */ e("li", { className: "df-tag", children: "CSS" }),
-        /* @__PURE__ */ e("li", { className: "df-tag", children: "JavaScript" }),
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "React.js" }),
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "Node.js" }),
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "MongoDB" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "TypeScript" }),
-        /* @__PURE__ */ e("li", { className: "df-tag", children: "SQL" }),
-        /* @__PURE__ */ e("li", { className: "df-tag", children: "SAP" })
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "Python" }),
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "Java" }),
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "C/PHP" })
       ] })
     ] }),
     /* @__PURE__ */ i("div", { className: "df-card", children: [
@@ -2228,10 +2229,10 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
         " i care about"
       ] }),
       /* @__PURE__ */ i("ul", { className: "df-tags df-tags--blush", children: [
-        /* @__PURE__ */ e("li", { className: "df-tag", children: "clean UI" }),
-        /* @__PURE__ */ e("li", { className: "df-tag", children: "responsive design" }),
-        /* @__PURE__ */ e("li", { className: "df-tag", children: "anime aesthetics" }),
-        /* @__PURE__ */ e("li", { className: "df-tag", children: "storytelling" })
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "AI-driven solutions" }),
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "algorithms" }),
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "system design" }),
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "full-stack dev" })
       ] })
     ] })
   ] }, "p1"),
