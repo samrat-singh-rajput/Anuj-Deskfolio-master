@@ -2192,7 +2192,7 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
       {
         className: "df-edit--body",
         placeholder: "a little about you…",
-        initial: "Final-year Computer Engineering student with hands-on experience building full-stack applications. Passionate about AI-driven solutions, object-oriented programming, and solving complex problems with modern tech ✨"
+        initial: "Final-year B.Tech Computer Engineering student (CGPA: 8.06/10) with hands-on experience developing a full-stack Blood Bank & Donor Management System using React, Node.js, and Google Gemini AI. Strong foundation in object-oriented programming, REST APIs, and data structures & algorithms ✨"
       }
     ) }),
     /* @__PURE__ */ e("p", { className: "df-label df-label--push", children: "currently…" }),
@@ -2244,7 +2244,7 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
         /* @__PURE__ */ e($e, { href: "https://blood-bank-management-system-ecru.vercel.app/", variant: 0, children: "Blood Bank System" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Full-Stack Web App" })
       ] }),
-      /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", placeholder: "describe it…", initial: "Developed a full-stack web application enabling donors, recipients, and blood banks to coordinate via centralized platform using React, Node.js, MongoDB and Gemini AI." })
+      /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", placeholder: "describe it…", initial: "Developed a scalable full-stack web application enabling donors and blood banks to coordinate via centralized platform using React, TypeScript, Node.js, MongoDB Atlas and Google Gemini AI." })
     ] }),
     /* @__PURE__ */ i("div", { className: "df-proj", children: [
       /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
@@ -2279,7 +2279,7 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
   ] }, "p3"),
   // spread 3 left: experience timeline
   /* @__PURE__ */ i("div", { className: "df-page", children: [
-    /* @__PURE__ */ e("h3", { className: "df-hello", children: "experience" }),
+    /* @__PURE__ */ e("h3", { className: "df-hello", children: "education & certs" }),
     /* @__PURE__ */ i("ul", { className: "df-xp", children: [
       /* @__PURE__ */ i("li", { className: "df-xp-row", children: [
         /* @__PURE__ */ e("span", { className: "df-xp-dot", "aria-hidden": "true" }),
@@ -2298,8 +2298,8 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
       /* @__PURE__ */ i("li", { className: "df-xp-row", children: [
         /* @__PURE__ */ e("span", { className: "df-xp-dot", "aria-hidden": "true" }),
         /* @__PURE__ */ i("div", { children: [
-          /* @__PURE__ */ e("p", { className: "df-xp-role", children: "C · Python · Java · JavaScript · PHP" }),
-          /* @__PURE__ */ e("p", { className: "df-xp-meta", children: "MongoDB · MySQL · Git · Node.js" })
+          /* @__PURE__ */ e("p", { className: "df-xp-role", children: "Higher Secondary Education (NEB)" }),
+          /* @__PURE__ */ e("p", { className: "df-xp-meta", children: "Score: 77% · Secondary Education (SEE): 80%" })
         ] })
       ] })
     ] })
