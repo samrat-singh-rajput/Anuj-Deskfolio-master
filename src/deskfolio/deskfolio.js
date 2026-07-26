@@ -2248,7 +2248,7 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
     ] }),
     /* @__PURE__ */ i("div", { className: "df-proj", children: [
       /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
-        /* @__PURE__ */ e($e, { href: "https://github.com/asrajputchauhan", variant: 2, children: "CodeChef Assessment" }),
+        /* @__PURE__ */ e($e, { href: "https://github.com/samrat-singh-rajput", variant: 2, children: "CodeChef Assessment" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Competitive Programming" })
       ] }),
       /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", placeholder: "describe it…", initial: "Scored 2,600/3,000 (86%) in CodeChef C Language Skill Test, demonstrating strong programming fundamentals." })
@@ -2260,14 +2260,14 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
     /* @__PURE__ */ e("h3", { className: "df-hello df-hello--lilac", children: "more work" }),
     /* @__PURE__ */ i("div", { className: "df-proj", children: [
       /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
-        /* @__PURE__ */ e($e, { href: "https://github.com/asrajputchauhan", variant: 3, children: "AI Solutions" }),
+        /* @__PURE__ */ e($e, { href: "https://github.com/samrat-singh-rajput", variant: 3, children: "AI Solutions" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Prompt Engineering" })
       ] }),
       /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", placeholder: "describe it…", initial: "Building practical AI-driven solutions leveraging tools like Google Gemini AI for intelligent systems." })
     ] }),
     /* @__PURE__ */ i("div", { className: "df-proj", children: [
       /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
-        /* @__PURE__ */ e($e, { href: "https://github.com/asrajputchauhan", variant: 1, children: "Tech Fundamentals" }),
+        /* @__PURE__ */ e($e, { href: "https://github.com/samrat-singh-rajput", variant: 1, children: "Tech Fundamentals" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Data Structures & Algorithms" })
       ] }),
       /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", placeholder: "describe it…", initial: "Strong foundation in object-oriented programming, DBMS, Operating Systems, and REST APIs." })
@@ -2335,6 +2335,14 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
       /* @__PURE__ */ e("li", { children: /* @__PURE__ */ i("a", { className: "df-link", href: "mailto:asrajputchauhan@gmail.com", children: [
         /* @__PURE__ */ e($0, {}),
         " Email"
+      ] }) }),
+      /* @__PURE__ */ e("li", { children: /* @__PURE__ */ i("a", { className: "df-link", href: "https://blood-bank-management-system-ecru.vercel.app/", target: "_blank", rel: "noreferrer", children: [
+        /* @__PURE__ */ i("svg", { width: 16, height: 16, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", className: "df-icon", children: [
+          /* @__PURE__ */ e("path", { d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" }),
+          /* @__PURE__ */ e("polyline", { points: "15 3 21 3 21 9" }),
+          /* @__PURE__ */ e("line", { x1: 10, y1: 14, x2: 21, y2: 3 })
+        ] }),
+        " Blood Bank System"
       ] }) })
     ] }),
     /* @__PURE__ */ i("p", { className: "df-sig", children: [
