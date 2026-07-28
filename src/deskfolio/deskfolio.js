@@ -2518,7 +2518,7 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
     className: "df-proj", children: [
       /* @__PURE__ */ i("p", {
       className: "df-proj-head", children: [
-        /* @__PURE__ */ e($e, { href: "https://github.com/samrat-singh-rajput", variant: 2, children: "CodeChef Assessment" }),
+        /* @__PURE__ */ e($e, { href: "https://drive.google.com/drive/folders/1VOtgKt180EhyHb4sqPE5NLmzFD0Dpy3f?usp=drive_link", variant: 2, children: "CodeChef Assessment" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Competitive Programming" })
       ]
     }),
