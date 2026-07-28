@@ -2259,7 +2259,41 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
         /* @__PURE__ */ e($e, { href: "https://blood-bank-management-system-ecru.vercel.app/", variant: 0, children: "Blood Bank System" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Full-Stack Web App" })
       ] }),
-      /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", placeholder: "describe it…", initial: "● Developed a full-stack web application enabling donors, recipients, and blood banks to coordinate blood availability and requests through a centralized platform.\n● Implemented user authentication, donor registration, and blood inventory management, including search functionality by blood group and location.\n● Developed and deployed a scalable full-stack web application using React.js, TypeScript, Node.js, Express.js, MongoDB Atlas, REST APIs, and Google Gemini AI for intelligent user assistance.\n\nLive project: https://blood-bank-management-system-ecru.vercel.app/\nGitHub repo: https://github.com/samrat-singh-rajput/blood-bank-management-systemtoday" })
+      /* @__PURE__ */ i("ul", { style: { margin: "0.3rem 0 0.5rem", paddingLeft: "1.1rem", fontSize: "0.85rem", lineHeight: "1.45", display: "flex", flexDirection: "column", gap: "0.35rem", color: "var(--df-ink)" }, children: [
+        /* @__PURE__ */ e("li", { children: "Developed a full-stack web application enabling donors, recipients, and blood banks to coordinate blood availability and requests through a centralized platform." }),
+        /* @__PURE__ */ e("li", { children: "Implemented user authentication, donor registration, and blood inventory management, including search functionality by blood group and location." }),
+        /* @__PURE__ */ e("li", { children: "Developed and deployed a scalable full-stack web application using React.js, TypeScript, Node.js, Express.js, MongoDB Atlas, REST APIs, and Google Gemini AI for intelligent user assistance." })
+      ] }),
+      /* @__PURE__ */ i("div", { style: { display: "flex", flexWrap: "wrap", gap: "0.4rem", marginTop: "0.5rem" }, children: [
+        /* @__PURE__ */ i("a", {
+          href: "https://blood-bank-management-system-ecru.vercel.app/",
+          target: "_blank",
+          rel: "noreferrer",
+          className: "df-tag",
+          style: { textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.3rem", background: "var(--df-blush-deep)", color: "#fff", padding: "0.25rem 0.7rem", borderRadius: "999px", fontSize: "0.78rem", fontWeight: "600", boxShadow: "0 2px 5px rgba(0,0,0,0.12)" },
+          children: [
+            /* @__PURE__ */ i("svg", { width: 13, height: 13, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", children: [
+              /* @__PURE__ */ e("path", { d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" }),
+              /* @__PURE__ */ e("polyline", { points: "15 3 21 3 21 9" }),
+              /* @__PURE__ */ e("line", { x1: 10, y1: 14, x2: 21, y2: 3 })
+            ] }),
+            " Live Project"
+          ]
+        }),
+        /* @__PURE__ */ i("a", {
+          href: "https://github.com/samrat-singh-rajput/blood-bank-management-systemtoday",
+          target: "_blank",
+          rel: "noreferrer",
+          className: "df-tag",
+          style: { textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.3rem", background: "color-mix(in srgb, var(--df-ink) 85%, black)", color: "#fff", padding: "0.25rem 0.7rem", borderRadius: "999px", fontSize: "0.78rem", fontWeight: "600", boxShadow: "0 2px 5px rgba(0,0,0,0.12)" },
+          children: [
+            /* @__PURE__ */ i("svg", { width: 13, height: 13, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", children: [
+              /* @__PURE__ */ e("path", { d: "M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" })
+            ] }),
+            " GitHub Repo"
+          ]
+        })
+      ] })
     ] })
   ] }, "p2"),
   // spread 2 right: more work
