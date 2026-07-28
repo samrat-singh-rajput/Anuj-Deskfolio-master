@@ -2253,26 +2253,26 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
   ] }, "p1"),
   // spread 2 left: selected work
   /* @__PURE__ */ i("div", { className: "df-page", children: [
-    /* @__PURE__ */ e("h3", { className: "df-hello", children: "selected work" }),
+    /* @__PURE__ */ e("h3", { className: "df-hello", children: "Projects" }),
     /* @__PURE__ */ i("div", { className: "df-proj", children: [
       /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
         /* @__PURE__ */ e($e, { href: "https://blood-bank-management-system-ecru.vercel.app/", variant: 0, children: "Blood Bank System" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Full-Stack Web App" })
       ] }),
-      /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", placeholder: "describe it…", initial: "Developed a scalable full-stack web application enabling donors and blood banks to coordinate via centralized platform using React, TypeScript, Node.js, MongoDB Atlas and Google Gemini AI." })
-    ] }),
-    /* @__PURE__ */ i("div", { className: "df-proj", children: [
-      /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
-        /* @__PURE__ */ e($e, { href: "https://github.com/samrat-singh-rajput", variant: 2, children: "CodeChef Assessment" }),
-        /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Competitive Programming" })
-      ] }),
-      /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", placeholder: "describe it…", initial: "Scored 2,600/3,000 (86%) in CodeChef C Language Skill Test, demonstrating strong programming fundamentals." })
+      /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", placeholder: "describe it…", initial: "● Developed a full-stack web application enabling donors, recipients, and blood banks to coordinate blood availability and requests through a centralized platform.\n● Implemented user authentication, donor registration, and blood inventory management, including search functionality by blood group and location.\n● Developed and deployed a scalable full-stack web application using React.js, TypeScript, Node.js, Express.js, MongoDB Atlas, REST APIs, and Google Gemini AI for intelligent user assistance.\n\nLive project: https://blood-bank-management-system-ecru.vercel.app/\nGitHub repo: https://github.com/samrat-singh-rajput/blood-bank-management-systemtoday" })
     ] })
   ] }, "p2"),
   // spread 2 right: more work
   /* @__PURE__ */ i("div", { className: "df-page", children: [
     /* @__PURE__ */ e(pe, { className: "df-doodle df-doodle--butter", style: { bottom: 16, right: 12, width: 22, height: 22 } }),
     /* @__PURE__ */ e("h3", { className: "df-hello df-hello--lilac", children: "more work" }),
+    /* @__PURE__ */ i("div", { className: "df-proj", children: [
+      /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
+        /* @__PURE__ */ e($e, { href: "https://github.com/samrat-singh-rajput", variant: 2, children: "CodeChef Assessment" }),
+        /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Competitive Programming" })
+      ] }),
+      /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", placeholder: "describe it…", initial: "Scored 2,600/3,000 (86%) in CodeChef C Language Skill Test, demonstrating strong programming fundamentals." })
+    ] }),
     /* @__PURE__ */ i("div", { className: "df-proj", children: [
       /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
         /* @__PURE__ */ e($e, { href: "https://github.com/samrat-singh-rajput", variant: 3, children: "AI Solutions" }),
