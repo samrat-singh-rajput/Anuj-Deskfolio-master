@@ -2558,7 +2558,7 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
   // spread 3 left: experience timeline
   /* @__PURE__ */ i("div", {
   className: "df-page", children: [
-    /* @__PURE__ */ e("h3", { className: "df-hello", children: "Education & Certs" }),
+    /* @__PURE__ */ e("h3", { className: "df-hello", children: /* @__PURE__ */ e("a", { href: "https://drive.google.com/drive/folders/1VOtgKt180EhyHb4sqPE5NLmzFD0Dpy3f?usp=drive_link", target: "_blank", rel: "noreferrer", style: { color: "inherit", textDecoration: "none" }, children: "Education & Certs" }) }),
     /* @__PURE__ */ i("ul", {
     className: "df-xp", style: { gap: "0.5rem" }, children: [
       /* @__PURE__ */ i("li", {
@@ -2599,7 +2599,7 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
         /* @__PURE__ */ e("span", { className: "df-xp-dot", "aria-hidden": "true" }),
         /* @__PURE__ */ i("div", {
         children: [
-          /* @__PURE__ */ e("p", { className: "df-xp-role", children: "Certifications (Simplilearn)" }),
+          /* @__PURE__ */ e("p", { className: "df-xp-role", children: /* @__PURE__ */ e("a", { href: "https://drive.google.com/drive/folders/1VOtgKt180EhyHb4sqPE5NLmzFD0Dpy3f?usp=drive_link", target: "_blank", rel: "noreferrer", style: { color: "inherit", textDecoration: "underline", textDecorationColor: "var(--df-blush)" }, children: "Certifications (Simplilearn)" }) }),
           /* @__PURE__ */ i("ul", {
           style: { margin: "0.2rem 0 0", paddingLeft: "1rem", fontSize: "0.78rem", lineHeight: "1.35", color: "var(--df-ink-soft)", display: "flex", flexDirection: "column", gap: "0.12rem" }, children: [
             /* @__PURE__ */ e("li", { children: "Artificial Intelligence Beginners Guide" }),
