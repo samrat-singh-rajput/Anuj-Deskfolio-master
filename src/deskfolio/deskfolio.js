@@ -2560,25 +2560,14 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
   className: "df-page", children: [
     /* @__PURE__ */ e("h3", { className: "df-hello", children: "Education & Certs" }),
     /* @__PURE__ */ i("ul", {
-    className: "df-xp", children: [
+    className: "df-xp", style: { gap: "0.5rem" }, children: [
       /* @__PURE__ */ i("li", {
       className: "df-xp-row", children: [
         /* @__PURE__ */ e("span", { className: "df-xp-dot", "aria-hidden": "true" }),
         /* @__PURE__ */ i("div", {
         children: [
-          /* @__PURE__ */ e("p", { className: "df-xp-role", children: "B.Tech Computer Engineering" }),
-          /* @__PURE__ */ e("p", { className: "df-xp-meta", children: "Ganpat University, Gujarat · 2023-2027" })
-        ]
-      })
-      ]
-    }),
-      /* @__PURE__ */ i("li", {
-      className: "df-xp-row", children: [
-        /* @__PURE__ */ e("span", { className: "df-xp-dot", "aria-hidden": "true" }),
-        /* @__PURE__ */ i("div", {
-        children: [
-          /* @__PURE__ */ e("p", { className: "df-xp-role", children: "Certifications" }),
-          /* @__PURE__ */ e("p", { className: "df-xp-meta", children: "Simplilearn (AI, Cloud, Python, MERN)" })
+          /* @__PURE__ */ e("p", { className: "df-xp-role", children: "B.Tech in Computer Engineering" }),
+          /* @__PURE__ */ e("p", { className: "df-xp-meta", children: "Ganpat University, Gujarat · 2023–2027 (Expected) · CGPA: 8.06/10" })
         ]
       })
       ]
@@ -2589,7 +2578,38 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
         /* @__PURE__ */ i("div", {
         children: [
           /* @__PURE__ */ e("p", { className: "df-xp-role", children: "Higher Secondary Education (NEB)" }),
-          /* @__PURE__ */ e("p", { className: "df-xp-meta", children: "Score: 77% · Secondary Education (SEE): 80%" })
+          /* @__PURE__ */ e("p", { className: "df-xp-meta", children: "Score: 77%" })
+        ]
+      })
+      ]
+    }),
+      /* @__PURE__ */ i("li", {
+      className: "df-xp-row", children: [
+        /* @__PURE__ */ e("span", { className: "df-xp-dot", "aria-hidden": "true" }),
+        /* @__PURE__ */ i("div", {
+        children: [
+          /* @__PURE__ */ e("p", { className: "df-xp-role", children: "Secondary Education (SEE)" }),
+          /* @__PURE__ */ e("p", { className: "df-xp-meta", children: "Score: 80%" })
+        ]
+      })
+      ]
+    }),
+      /* @__PURE__ */ i("li", {
+      className: "df-xp-row", children: [
+        /* @__PURE__ */ e("span", { className: "df-xp-dot", "aria-hidden": "true" }),
+        /* @__PURE__ */ i("div", {
+        children: [
+          /* @__PURE__ */ e("p", { className: "df-xp-role", children: "Certifications (Simplilearn)" }),
+          /* @__PURE__ */ i("ul", {
+          style: { margin: "0.2rem 0 0", paddingLeft: "1rem", fontSize: "0.78rem", lineHeight: "1.35", color: "var(--df-ink-soft)", display: "flex", flexDirection: "column", gap: "0.15rem" }, children: [
+            /* @__PURE__ */ e("li", { children: "Artificial Intelligence Beginners Guide" }),
+            /* @__PURE__ */ e("li", { children: "Introduction to Cloud Computing" }),
+            /* @__PURE__ */ e("li", { children: "Introduction to the Fundamentals of Databases" }),
+            /* @__PURE__ */ e("li", { children: "Python for Beginners" }),
+            /* @__PURE__ */ e("li", { children: "Introduction to MERN Stack" }),
+            /* @__PURE__ */ e("li", { children: "Design Thinking for Beginners" })
+          ]
+        })
         ]
       })
       ]
