@@ -436,7 +436,7 @@ const ct = [
     center: "M67.1,226.5Q67.1,226.5 68.7,226.6Q70.4,226.7 72.6,225.9Q74.9,225.2 76.8,224.2Q78.8,223.2 78.5,223.2Q78.2,223.2 77.9,222.8Q77.6,222.3 79.3,221.2Q81.1,220.2 83.4,219.5Q85.6,218.9 88.0,218.7Q90.3,218.4 92.6,218.8Q94.9,219.1 96.6,220.1Q98.4,221.0 100.6,221.5Q102.8,221.9 104.0,223.4Q105.2,224.9 104.1,226.7Q103.1,228.5 102.9,229.2Q102.7,229.9 103.1,230.7Q103.6,231.4 105.9,231.2Q108.2,231.0 110.4,230.0Q112.6,229.1 114.5,227.7Q116.4,226.3 118.6,225.4Q120.9,224.5 121.5,226.1Q122.2,227.8 123.8,229.0Q125.5,230.2 127.9,229.9Q130.3,229.5 132.6,228.8Q135.0,228.1 137.3,227.4Q139.6,226.6 142.0,225.9Q144.3,225.1 146.2,225.7Q148.1,226.3 150.5,226.1Q152.9,225.8 155.3,225.3Q157.7,224.7 160.1,224.3Q162.4,224.0 164.3,224.3Q166.2,224.7 168.6,224.3Q171.0,223.8 173.3,223.2Q175.7,222.5 177.7,222.8Q179.7,223.0 182.1,223.1Q184.5,223.2 186.9,222.9Q189.3,222.6 191.7,222.2Q194.1,221.7 196.5,221.3Q198.9,220.9 201.3,220.4Q203.7,220.0 206.1,219.6Q208.6,219.2 211.0,218.7Q213.4,218.3 215.8,218.0Q218.2,217.6 220.6,217.3Q223.0,216.9 225.5,216.6Q227.9,216.3 230.3,216.0Q232.7,215.7 235.2,215.4Q237.6,215.1 240.0,214.8Q242.4,214.5 244.7,214.1L247.0,213.8"
   }
 ];
-function ue({ className: t = "", placeholder: r, initial: a }) {
+function ue({ className: t = "", placeholder: r, initial: a, style: m }) {
   const n = z(null);
   return W(() => {
     const s = n.current;
@@ -446,6 +446,7 @@ function ue({ className: t = "", placeholder: r, initial: a }) {
     {
       ref: n,
       className: `df-edit ${t}`.trim(),
+      style: m,
       contentEditable: !0,
       suppressContentEditableWarning: !0,
       role: "textbox",
@@ -2305,21 +2306,21 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
         /* @__PURE__ */ e($e, { href: "https://github.com/samrat-singh-rajput", variant: 2, children: "CodeChef Assessment" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Competitive Programming" })
       ] }),
-      /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", placeholder: "describe it…", initial: "Scored 2,600/3,000 (86%) in CodeChef C Language Skill Test, demonstrating strong programming fundamentals." })
+      /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", style: { fontSize: "0.85rem", lineHeight: "1.45" }, placeholder: "describe it…", initial: "Scored 2,600/3,000 (86%) in CodeChef C Language Skill Test, demonstrating strong programming fundamentals." })
     ] }),
     /* @__PURE__ */ i("div", { className: "df-proj", children: [
       /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
         /* @__PURE__ */ e($e, { href: "https://github.com/samrat-singh-rajput", variant: 3, children: "AI Solutions" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Prompt Engineering" })
       ] }),
-      /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", placeholder: "describe it…", initial: "Building practical AI-driven solutions leveraging tools like Google Gemini AI for intelligent systems." })
+      /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", style: { fontSize: "0.85rem", lineHeight: "1.45" }, placeholder: "describe it…", initial: "Building practical AI-driven solutions leveraging tools like Google Gemini AI for intelligent systems." })
     ] }),
     /* @__PURE__ */ i("div", { className: "df-proj", children: [
       /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
         /* @__PURE__ */ e($e, { href: "https://github.com/samrat-singh-rajput", variant: 1, children: "Tech Fundamentals" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Data Structures & Algorithms" })
       ] }),
-      /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", placeholder: "describe it…", initial: "Strong foundation in object-oriented programming, DBMS, Operating Systems, and REST APIs." })
+      /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", style: { fontSize: "0.85rem", lineHeight: "1.45" }, placeholder: "describe it…", initial: "Strong foundation in object-oriented programming, DBMS, Operating Systems, and REST APIs." })
     ] }),
     /* @__PURE__ */ i("p", { className: "df-sig", children: [
       "…and more on the shelf ",
