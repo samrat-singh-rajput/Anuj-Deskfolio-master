@@ -7,6 +7,9 @@
   </p>
 
   <p align="center">
+    <a href="https://samrat-singh-rajput.github.io/Anuj-Deskfolio-master/">
+      <img src="https://img.shields.io/badge/🌐%20Live%20Demo-View%20Portfolio-FF69B4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo" />
+    </a>
     <a href="https://github.com/samrat-singh-rajput">
       <img src="https://img.shields.io/badge/Developer-Anuj%20Singh%20Rajput-6A5ACD?style=for-the-badge&logo=github&logoColor=white" alt="Developer Anuj" />
     </a>
@@ -23,6 +26,7 @@
 
   ---
 
+  [🌐 Live Demo](https://samrat-singh-rajput.github.io/Anuj-Deskfolio-master/) •
   [🌟 Overview](#-overview) •
   [✨ Features](#-key-features) •
   [🛠️ Tech Stack](#%EF%B8%8F-tech-stack) •
@@ -36,6 +40,8 @@
 ## 🌟 Overview
 
 **Anuj's Deskfolio** is an aesthetic, interactive digital workspace portfolio. Designed around a physical notebook placed on a desk, visitors can flip through pages to explore developer experience, skills, full-stack projects, education history, and social links.
+
+🌐 **Live Demo Website**: [https://samrat-singh-rajput.github.io/Anuj-Deskfolio-master/](https://samrat-singh-rajput.github.io/Anuj-Deskfolio-master/)
 
 Features interactive elements such as an **ambient room light pull cord**, an **interactive dev activity iPad widget**, customizable desk items, and dynamic micro-animations.
 
