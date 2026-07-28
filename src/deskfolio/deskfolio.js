@@ -2216,11 +2216,13 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
       /* @__PURE__ */ i("ul", { className: "df-tags", children: [
         /* @__PURE__ */ e("li", { className: "df-tag", children: "React.js" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "Node.js" }),
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "Express js" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "MongoDB" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "TypeScript" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "Python" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "Java" }),
-        /* @__PURE__ */ e("li", { className: "df-tag", children: "C/PHP" })
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "C" }),
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "PHP" })
       ] })
     ] }),
     /* @__PURE__ */ i("div", { className: "df-card", children: [
@@ -2233,6 +2235,19 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
         /* @__PURE__ */ e("li", { className: "df-tag", children: "algorithms" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "system design" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "full-stack dev" })
+      ] })
+    ] }),
+    /* @__PURE__ */ i("div", { className: "df-card df-card--mint", children: [
+      /* @__PURE__ */ i("p", { className: "df-card-title", children: [
+        /* @__PURE__ */ e(st, {}),
+        " Soft skills:"
+      ] }),
+      /* @__PURE__ */ i("ul", { className: "df-tags df-tags--mint", children: [
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "Effective Communication" }),
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "Quick learner" }),
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "problem-solving" }),
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "decision-making" }),
+        /* @__PURE__ */ e("li", { className: "df-tag", children: "teamwork" })
       ] })
     ] })
   ] }, "p1"),
