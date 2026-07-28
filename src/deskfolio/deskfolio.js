@@ -2670,7 +2670,7 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
     }),
       /* @__PURE__ */ e("li", {
       children: /* @__PURE__ */ i("a", {
-        className: "df-link", href: "https://blood-bank-management-system-ecru.vercel.app/", target: "_blank", rel: "noreferrer", children: [
+        className: "df-link", href: "https://samrat-singh-rajput.github.io/Anuj-Portfolio/", target: "_blank", rel: "noreferrer", children: [
         /* @__PURE__ */ i("svg", {
           width: 16, height: 16, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", className: "df-icon", children: [
           /* @__PURE__ */ e("path", { d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" }),
@@ -2678,7 +2678,7 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
           /* @__PURE__ */ e("line", { x1: 10, y1: 14, x2: 21, y2: 3 })
           ]
         }),
-          " Blood Bank System"
+          " Protfolio"
         ]
       })
     })
