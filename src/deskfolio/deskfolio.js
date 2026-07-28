@@ -35,7 +35,7 @@ function it({
   const l = re(), v = Qe(() => jt(t, r, a), [t, r, a]), I = v.length;
   let w = I;
   if (n)
-    for (w = Math.max(0, I - 1); w > 0 && ((Le = v[w]) == null ? void 0 : Le.front) == null; ) w--;
+    for (w = Math.max(0, I - 1); w > 0 && ((Le = v[w]) == null ? void 0 : Le.front) == null;) w--;
   const [g, T] = M(() => Math.max(0, Math.min(p, I))), [O, D] = M(null), [A, Y] = M(null), [Z, F] = M(null), _ = g > 0, S = O !== null || A !== null, R = z([]);
   R.current.length !== I && (R.current = v.map((c, o) => Gt(o < g ? -180 : 0)));
   const K = R.current, j = z(null), J = z(null), b = z(0), E = () => {
@@ -141,7 +141,8 @@ function it({
       },
       "data-open": _,
       children: [
-        /* @__PURE__ */ e("div", { className: "deskfolio-stage", style: { width: ce, height: k }, children: /* @__PURE__ */ i(
+        /* @__PURE__ */ e("div", {
+        className: "deskfolio-stage", style: { width: ce, height: k }, children: /* @__PURE__ */ i(
           Q.div,
           {
             ref: j,
@@ -183,13 +184,14 @@ function it({
               })
             ]
           }
-        ) }),
+        )
+      }),
         /* @__PURE__ */ e("span", { className: "deskfolio-sr", "aria-live": "polite", children: g === 0 ? "Closed" : g >= I ? "The end" : `Spread ${g} of ${I - 1}` })
       ]
     }
   );
 }
-const Xt = $t(function({
+const Xt = $t(function ({
   index: r,
   flipped: a,
   peek: n,
@@ -220,27 +222,33 @@ const Xt = $t(function({
     }), () => _.stop();
   }, [a, n, s, h, u, r, l]);
   const w = he(u, [0, -90], [0, 0.42], { clamp: !0 }), g = he(u, [-90, -180], [0.42, 0], { clamp: !0 }), T = he(u, (D) => D > -90 ? 1 : 0), O = he(u, (D) => D <= -90 ? 1 : 0);
-  return /* @__PURE__ */ i(Q.div, { className: "deskfolio-sheet", style: { rotateY: u, zIndex: p, willChange: d ? "transform" : "auto" }, children: [
-    /* @__PURE__ */ i(Q.div, { className: rt("front", m.frontHard), style: { opacity: T }, children: [
+  return /* @__PURE__ */ i(Q.div, {
+    className: "deskfolio-sheet", style: { rotateY: u, zIndex: p, willChange: d ? "transform" : "auto" }, children: [
+    /* @__PURE__ */ i(Q.div, {
+      className: rt("front", m.frontHard), style: { opacity: T }, children: [
       /* @__PURE__ */ e("div", { className: "deskfolio-page-content", children: m.front }),
       /* @__PURE__ */ e(Q.div, { className: "deskfolio-fold", style: { opacity: w }, "aria-hidden": "true" }),
       /* @__PURE__ */ e("div", { className: "deskfolio-spine-shade", "aria-hidden": "true" }),
-      k && /* @__PURE__ */ e(
-        "div",
-        {
-          className: "deskfolio-corner",
-          "aria-hidden": "true",
-          onPointerEnter: () => v(r, !0),
-          onPointerLeave: () => v(r, !1)
-        }
-      )
-    ] }),
-    /* @__PURE__ */ i(Q.div, { className: rt("back", m.backHard), style: { opacity: O }, children: [
+        k && /* @__PURE__ */ e(
+          "div",
+          {
+            className: "deskfolio-corner",
+            "aria-hidden": "true",
+            onPointerEnter: () => v(r, !0),
+            onPointerLeave: () => v(r, !1)
+          }
+        )
+      ]
+    }),
+    /* @__PURE__ */ i(Q.div, {
+      className: rt("back", m.backHard), style: { opacity: O }, children: [
       /* @__PURE__ */ e("div", { className: "deskfolio-page-content", children: m.back }),
       /* @__PURE__ */ e(Q.div, { className: "deskfolio-fold", style: { opacity: g }, "aria-hidden": "true" }),
       /* @__PURE__ */ e("div", { className: "deskfolio-spine-shade deskfolio-spine-shade--right", "aria-hidden": "true" })
-    ] })
-  ] });
+      ]
+    })
+    ]
+  });
 });
 function rt(t, r) {
   return [
@@ -301,11 +309,13 @@ function nt({ value: t, onChange: r, min: a = 0, max: n = 1, step: s = 0.01, ari
         b.key === "ArrowRight" || b.key === "ArrowUp" ? (r(F(xe(t + s, a, n))), b.preventDefault()) : (b.key === "ArrowLeft" || b.key === "ArrowDown") && (r(F(xe(t - s, a, n))), b.preventDefault());
       },
       children: [
-        /* @__PURE__ */ i(Q.div, { className: "dial-track", style: { width: Y, x: Z }, children: [
+        /* @__PURE__ */ i(Q.div, {
+        className: "dial-track", style: { width: Y, x: Z }, children: [
           /* @__PURE__ */ e(Q.div, { className: "dial-fill", style: { width: O } }),
           /* @__PURE__ */ e("div", { className: "dial-ticks", "aria-hidden": "true", children: Jt.map((b) => /* @__PURE__ */ e("span", { style: { left: `${b}%` } }, b)) }),
           /* @__PURE__ */ e(Q.div, { className: "dial-handle", style: { left: D }, "aria-hidden": "true" })
-        ] }),
+        ]
+      }),
         p != null && /* @__PURE__ */ e("span", { className: "dial-label", children: p }),
         d != null && /* @__PURE__ */ e("span", { className: "dial-value", children: d })
       ]
@@ -459,32 +469,39 @@ function ue({ className: t = "", placeholder: r, initial: a, style: m }) {
 }
 function $e({ href: t, variant: r = 0, children: a }) {
   const n = ct[r % ct.length], s = Nt();
-  return /* @__PURE__ */ i("a", { className: "df-proj-name", href: t, children: [
-    a,
-    /* @__PURE__ */ i("svg", { className: "df-proj-scribble", viewBox: n.viewBox, preserveAspectRatio: "none", "aria-hidden": "true", children: [
-      /* @__PURE__ */ e("mask", { id: s, children: /* @__PURE__ */ e(
-        "path",
-        {
-          className: "df-scribble-pen",
-          d: n.center,
-          fill: "none",
-          stroke: "#fff",
-          strokeWidth: n.strokeW,
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
-          pathLength: 1
-        }
-      ) }),
+  return /* @__PURE__ */ i("a", {
+    className: "df-proj-name", href: t, children: [
+      a,
+    /* @__PURE__ */ i("svg", {
+        className: "df-proj-scribble", viewBox: n.viewBox, preserveAspectRatio: "none", "aria-hidden": "true", children: [
+      /* @__PURE__ */ e("mask", {
+          id: s, children: /* @__PURE__ */ e(
+            "path",
+            {
+              className: "df-scribble-pen",
+              d: n.center,
+              fill: "none",
+              stroke: "#fff",
+              strokeWidth: n.strokeW,
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              pathLength: 1
+            }
+          )
+        }),
       /* @__PURE__ */ e("path", { d: n.fill, fill: "currentColor", mask: `url(#${s})` })
-    ] })
-  ] });
+        ]
+      })
+    ]
+  });
 }
 function t0({ className: t = "" }) {
   const r = z(null);
   return W(() => {
     const a = r.current;
     a && !a.textContent && (a.textContent = "Anuj");
-  }, []), /* @__PURE__ */ i("div", { className: `df-name-tag ${t}`.trim(), children: [
+  }, []), /* @__PURE__ */ i("div", {
+    className: `df-name-tag ${t}`.trim(), children: [
     /* @__PURE__ */ e("img", { className: "df-name-tag-img", src: DF_BASE + "stickers/items/hello-name-tag.svg", alt: "", draggable: !1, decoding: "async" }),
     /* @__PURE__ */ e(
       "div",
@@ -502,17 +519,20 @@ function t0({ className: t = "" }) {
         onKeyDown: (a) => a.stopPropagation()
       }
     )
-  ] });
+    ]
+  });
 }
 const De = (t) => (
   // hand-drawn outline heart
-  /* @__PURE__ */ i("svg", { viewBox: "138 40 105 105", fill: "currentColor", "aria-hidden": "true", ...t, children: [
+  /* @__PURE__ */ i("svg", {
+  viewBox: "138 40 105 105", fill: "currentColor", "aria-hidden": "true", ...t, children: [
     /* @__PURE__ */ e("path", { d: "M156.278,88.438c0-0.319,0-0.853,0-1.426c-0.415-0.437-0.849-0.894-1.022-1.077 c-0.311-0.686-0.474-1.046-0.932-2.055c-0.121-0.649,0.161-2.027-0.024-3.339c-0.22-0.262-0.418-0.498-0.7-0.834 c0.198-0.335,0.398-0.676,0.71-1.206c0-1.254,0-2.737,0-4.222c0.219-0.256,0.42-0.492,0.66-0.772c0-0.363,0-0.783,0-1.112 c0.217-0.594,0.713-0.425,1.058-0.558c0.607-0.351-0.286-1.515,1.015-1.363c-0.37-0.416-0.578-0.649-0.837-0.94 c0.118-0.261,0.181-0.587,0.374-0.787c0.502-0.523,0.955-1.016,1.16-1.774c0.151-0.562,1.004-0.734,1.108-1.46 c0.135-0.938,1.11-1.22,1.572-1.91c0.913,0.126,1.247-0.669,1.766-1.141c0.71-0.646,1.364-1.354,2.052-2.025 c0.06-0.059,0.206-0.018,0.291-0.064c1.133-0.612,2.286-1.275,3.465-1.679c1.316-0.451,2.6-0.947,3.769-1.645 c0.349,0.299,0.584,0.5,0.864,0.74c0.791,0,1.639,0,2.487,0c0.244,0.223,0.475,0.435,0.721,0.66c0.405,0,0.83,0,1.385,0 c0.348,0.529,0.732,1.113,1.212,1.843c0.081,0.018,0.371,0.085,0.663,0.151c0.605,0.604,1.209,1.208,1.813,1.813 c0.302,0.302,0.858,0.602,0.861,0.907c0.008,1.108,1.281,1.364,1.419,2.313c0.12,0.822,1.177,1.041,1.238,1.715 c0.084,0.916,0.837,1.167,1.286,1.814c0,0.559,0,1.186,0,1.769c0.432,0.517,0.745,1.024,0.86,1.633 c0.778,0.17,0.114,1.302,0.992,1.436c0.758,0.078,1.277-0.604,1.331-1.063c0.09-0.772,0.995-1.117,0.811-1.928 c0.742-0.59,0.681-1.722,1.578-2.241c0.932-0.539,0.915-1.808,1.803-2.463c0.765-0.564,1.422-1.297,2.047-2.024 c1.097-1.275,2.99-1.548,3.606-3.106c0.561,0,0.882,0,1.202,0c0.877-0.111,1.008-1.246,2.026-1.346 c0.725-0.071,1.391-0.736,2.213-1.211c0.256,0,0.682,0,1.099,0c0.24-0.221,0.471-0.435,0.689-0.636c1.72,0,3.426,0,5.119,0 c0.389,0.389,0.767,0.767,1.217,1.217c0.2-0.156,0.41-0.32,0.649-0.508c0.16-0.023,0.361-0.063,0.563-0.077 c0.213-0.014,0.447-0.059,0.637,0.008c0.465,0.163,0.756,0.577,1.326,0.697c0.53,0.112,0.942,0.787,1.404,1.213 c0.212,0.01,0.421,0.02,0.629,0.029c1.588,1.588,3.174,3.174,4.769,4.769c0,0.201,0,0.412,0,0.922 c0.574,0.474,1.306,1.079,2.114,1.747c-0.264,0.451-0.463,0.793-0.773,1.322c0.238,0.119,0.6,0.301,0.962,0.482 c-0.067,0.079-0.134,0.158-0.201,0.237c0.505,0.06,1.009,0.12,1.527,0.182c0.469,0.674,0.126,1.436,0.227,2.148 c0.213,0.232,0.427,0.463,0.653,0.707c0,0.412,0,0.836,0,1.226c0.23,0.258,0.438,0.491,0.597,0.668c0,1.131,0,2.191,0,3.218 c-0.183,0.183-0.334,0.334-0.547,0.547c0,1.2,0,2.465,0,3.65c-0.489,0.652-1.073,1.167-1.3,1.809 c-0.23,0.648-0.706,1.151-0.773,1.954c-0.067,0.796-0.554,1.702-1.258,2.336c-0.397,0.356-0.892,0.691-1.099,1.146 c-0.209,0.459-0.294,0.942-0.698,1.323c-0.184,0.174-0.076,0.702-0.261,0.824c-0.928,0.606-1.023,1.769-1.783,2.492 c-0.813,0.774-1.639,1.511-2.106,2.644c-0.372,0.903-1.653,1.287-1.768,2.474c-0.008,0.082-0.142,0.152-0.218,0.227 c-0.755,0.755-1.437,1.609-2.287,2.237c-0.814,0.601-0.448,1.932-1.565,2.259c-0.213,0-0.425,0-0.723,0 c-0.119,0.349-0.245,0.72-0.371,1.09c-1.284,1.284-2.568,2.568-3.856,3.855c-0.699,0.2-1.36,0.467-1.779,1.144 c0,0.196,0,0.408,0,0.69c-0.807,0.789-1.617,1.639-2.491,2.42c-0.995,0.889-1.684,2.17-3.126,2.5 c-0.676,0.797-1.727,1.322-2.054,2.351c-0.349,1.099-1.603,1.422-1.923,2.408c-0.46,1.419-1.825,1.988-2.625,3.241 c0.057,0.16,0.078,0.545,0.277,0.697c0.348,0.266,1.115-0.025,1.043,0.768c-0.019,0.147,0.007,0.286-0.05,0.344 c-1.125,1.14-2.26,2.271-3.472,3.484c-0.644-0.635-1.291-1.271-1.926-1.897c-0.257,0.228-0.491,0.435-0.706,0.627 c-0.931,0.02-1.302-0.548-1.547-1.301c-0.238-0.734-0.618-1.337-1.645-1.261c-0.349-0.762-0.714-1.561-1.13-2.469 c-0.19-0.039-0.482-0.1-0.814-0.169c-0.268-0.268-0.57-0.57-0.882-0.882c0-0.2,0-0.411,0-0.711 c-0.649-0.627-1.341-1.291-2.028-1.959c-0.738-0.718-0.882-1.876-1.813-2.453c0.242-1.154-1.207-1.319-1.353-2.339 c-0.075-0.522-0.764-0.942-1.134-1.439c-0.861-1.157-2.444-1.729-2.723-3.356c-1.133-1.133-2.266-2.266-3.399-3.398 c-1.057-1.057-2.194-2.049-3.142-3.197c-0.572-0.693-0.89-1.586-1.606-2.213c-0.722-0.632-1.412-1.312-2.034-2.041 c-0.451-0.528-0.737-1.194-1.156-1.755c-0.434-0.581-1.163-1.041-1.356-1.678c-0.246-0.81-1.157-1.042-1.301-1.703 C158.495,91.586,157.013,90.509,156.278,88.438z M160.764,69.348c-0.931,0.225-1.237,0.961-1.453,1.773 c-0.372,0.129-0.744,0.259-1.144,0.398c0.258,0.284,0.466,0.514,0.671,0.74c0.256,0.639-0.407,0.868-0.572,1.292 c0.207,0.246,0.406,0.482,0.526,0.625c0,0.959,0,1.799,0,2.591c-0.199,0.199-0.35,0.35-0.553,0.553 c-0.029,0.662-0.06,1.381-0.088,2.011c-0.237,0.237-0.388,0.388-0.566,0.566c0.417,0.446,0.836,0.894,1.267,1.354 c0,1.052,0,2.117,0,3.181c0.81,1.667,1.726,3.251,3.175,4.46c0.054,0.045-0.017,0.216,0.023,0.306 c0.492,1.124,0.97,2.279,2.031,2.991c0.59,0.396,0.398,1.142,0.887,1.572c0.557,0.489,1.045,1.055,1.563,1.588 c0.035,1.251,1.489,1.534,1.784,2.458c0.388,1.221,1.396,1.784,2.099,2.659c0.703,0.876,1.843,1.399,2.063,2.676 c0.044,0.258,0.405,0.622,0.657,0.655c1.06,0.138,1.556,0.988,2.216,1.621c0.663,0.636,1.38,1.209,1.629,2.21 c0.139,0.561,1.001,0.73,1.102,1.462c0.11,0.805,0.875,1.144,1.363,1.669c0.797,0.859,1.659,1.658,2.476,2.465 c0,0.252,0,0.465,0,0.691c1.148,0.781,1.363,2.314,2.496,3.118c-0.257,0.828,0.962,1.123,0.695,1.977 c0.517,0.517,1.148,0.975,1.541,1.587c0.428,0.668,0.642,1.474,1.277,1.845c0.423-0.2,0.784-0.365,1.14-0.541 c0.178-0.088,0.505-0.225,0.494-0.294c-0.197-1.156,1.158-1.354,1.386-2.333c0.202-0.866,1.046-1.419,1.903-1.886 c1.349-0.735,2.783-2.416,3.816-4.004c0.281-0.433,0.709-0.768,1.027-1.181c0.364-0.474,0.309-1.167,0.9-1.559 c0.503-0.334,1.191-0.273,1.575-0.877c0.337-0.53,0.818-0.969,0.864-1.021c0.802-0.342,1.082-0.442,1.342-0.58 c0.178-0.094,0.313-0.278,0.495-0.353c0.27-0.111,0.565-0.162,0.832-0.233c0-0.514,0-0.94,0-1.374 c1.658-1.658,3.309-3.328,4.984-4.972c0.453-0.445,0.638-1.021,0.949-1.522c0.528-0.852,0.914-1.809,1.742-2.507 c1.138-0.961,2.134-2.09,2.996-2.951c0.439-0.951,0.692-1.718,1.12-2.37c0.556-0.847,1.693-1.275,1.792-2.465 c0.845-0.807,1.69-1.613,2.466-2.354c-0.263-1.891,1.587-2.977,1.314-4.631c0.446-0.447,0.824-0.824,1.214-1.215 c0-1.264,0-2.542,0-3.772c0.188-0.41,0.746-0.531,0.616-1.29c-0.118-0.155-0.361-0.471-0.628-0.819c0-0.604,0-1.237,0-1.816 c-0.239-0.279-0.441-0.514-0.625-0.729c0.111-0.911,1.12-1.598,0.524-2.608c-0.227-0.227-0.425-0.604-0.684-0.653 c-1.018-0.189-1.845-0.859-2.161-1.636c-0.678-1.667-2.178-2.464-3.137-3.724c-1.176,0.383-1.811-0.559-2.684-0.784 c-0.739-0.19-0.669-1.201-1.141-1.731c-0.536,0-1.07,0-1.604,0c-0.379-0.656-0.379-0.656-1.227-0.374 c0.238,0.684,0.816,0.257,1.227,0.374c-0.075,0.182-0.15,0.365-0.272,0.66c-1.097,0-2.245,0-3.273,0 c-0.264,0.264-0.439,0.563-0.562,0.543c-1.118-0.184-1.977,0.504-2.798,0.987c-0.62,0.365-1.179,0.289-1.769,0.394 c-1.435,1.435-2.912,2.83-4.282,4.324c-0.521,0.569-1.277,0.615-1.791,1.118c0,0.211,0,0.423,0,0.676 c-1.271,1.257-2.56,2.533-3.844,3.803c0.185,1.075-1.009,1.269-1.325,2.169c0,0.291,0,0.706,0,1.064 c-0.437,0.537-1.042,0.84-1.236,1.485c0,0.107-0.043,0.245,0.008,0.315c0.182,0.253,0.396,0.483,0.633,0.763 c0,1.332,0.008,2.717-0.009,4.102c-0.002,0.186-0.127,0.371-0.196,0.556c-0.512,0.211-1.024,0.423-1.523,0.629 c-0.175-0.175-0.326-0.326-0.496-0.496c-0.403,0-0.825,0-1.319,0c-0.309,0.327-0.627,0.807-1.289,0.597 c-0.277-0.277-0.579-0.579-0.908-0.908c0-2.527,0-5.083,0-7.484c-0.419-0.741-0.734-1.364-1.11-1.947 c-0.442-0.684,0.138-1.706-0.814-2.261c-0.182-0.106-0.026-0.793-0.026-1.174c-0.774-0.516-1.855-0.483-1.982-1.768 c-0.05-0.51-0.767-0.953-1.215-1.467c0-0.147,0-0.359,0-0.614c-1.571-1.561-3.159-3.142-4.755-4.715 c-0.06-0.06-0.191-0.048-0.289-0.069c-0.32,0-0.641,0-0.997,0c-0.213-0.19-0.446-0.398-0.704-0.628c-0.389,0-0.813,0-1.253,0 c-0.216,0.2-0.447,0.414-0.685,0.634c-0.419,0-0.844,0-0.908,0c-1.237,0.469-2.156,0.896-2.969,1.417 c-0.962,0.617-1.673,1.624-2.462,2.431c-0.495,0-0.92,0-1.048,0c-1.014,0.382-1.208,1.09-1.428,1.783 c-0.195,0.044-0.392,0.084-0.586,0.132C160.94,68.79,160.691,68.942,160.764,69.348z M157.88,81.523 c-0.46,0.429-0.46,0.856,0,1.285C158.34,82.38,158.34,81.952,157.88,81.523z M174.952,107.924 c0.006,0.135,0.012,0.271,0.017,0.406c0.285,0.038,0.57,0.091,0.856,0.102c0.07,0.003,0.219-0.156,0.205-0.204 c-0.044-0.151-0.14-0.4-0.229-0.405C175.522,107.807,175.236,107.883,174.952,107.924z M188.964,123.505 c-0.071-0.071-0.158-0.212-0.211-0.2c-0.151,0.034-0.288,0.129-0.43,0.2c0.071,0.071,0.158,0.212,0.211,0.2 C188.685,123.672,188.822,123.576,188.964,123.505z M160.215,88.988c0.086,0.086,0.157,0.157,0.228,0.228 c0.071-0.142,0.167-0.279,0.2-0.43c0.012-0.053-0.129-0.139-0.2-0.211C160.367,88.714,160.29,88.854,160.215,88.988z M211.304,99.243c-0.074-0.134-0.151-0.274-0.228-0.413c-0.071,0.071-0.212,0.158-0.2,0.211c0.034,0.151,0.129,0.288,0.2,0.43 C211.147,99.399,211.218,99.328,211.304,99.243z" }),
     " ",
     /* @__PURE__ */ e("path", { d: "M160.691,69.169c0.305,0.261,0.48,0.41,0.655,0.558 C160.786,70.162,160.833,69.666,160.691,69.169z" }),
     " ",
     /* @__PURE__ */ e("path", { d: "M160.215,71.042c0.074-0.134,0.151-0.274,0.228-0.413 c0.071,0.071,0.212,0.158,0.2,0.211c-0.034,0.151-0.129,0.288-0.2,0.43C160.372,71.199,160.301,71.128,160.215,71.042z" })
-  ] })
+  ]
+})
 ), pe = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", ...t, children: /* @__PURE__ */ e("path", { d: "M12 2c.9 5.6 3.5 8.2 9 9-5.5.8-8.1 3.4-9 9-.9-5.6-3.5-8.2-9-9 5.5-.8 8.1-3.4 9-9Z" }) }), st = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", ...t, children: /* @__PURE__ */ e("path", { d: "M7 18a4 4 0 0 1-.5-8A5.5 5.5 0 0 1 17.2 8.6 4 4 0 0 1 17 18H7Z" }) }), ze = [
   { id: "sun", label: "Sunny", color: "#ffe066" },
   { id: "rose", label: "Rosey", color: "#ff9ec4" },
@@ -548,7 +568,7 @@ function i0() {
   Array.from(n.querySelectorAll(".df-hl")).filter((p) => r.intersectsNode(p)).forEach((p) => {
     const d = p.parentNode;
     if (d) {
-      for (; p.firstChild; ) d.insertBefore(p.firstChild, p);
+      for (; p.firstChild;) d.insertBefore(p.firstChild, p);
       d.removeChild(p), d.normalize();
     }
   }), t.removeAllRanges();
@@ -569,25 +589,34 @@ const Fe = {
 }, ot = "M8 57.0525H34.1475V67.7492H8V57.0525Z";
 function lt({ nib: t, color: r }) {
   const a = Nt(), n = t === "chisel" ? Fe.slant : t === "bullet" ? Fe.round : Fe.fine, s = `color-mix(in srgb, ${r}, white 8%)`;
-  return /* @__PURE__ */ i("svg", { viewBox: "0 0 43 170", fill: "none", className: "df-mk", "aria-hidden": "true", children: [
-    /* @__PURE__ */ e("g", { filter: `url(#${a}-f)`, children: /* @__PURE__ */ i("g", { clipPath: `url(#${a}-c)`, children: [
+  return /* @__PURE__ */ i("svg", {
+    viewBox: "0 0 43 170", fill: "none", className: "df-mk", "aria-hidden": "true", children: [
+    /* @__PURE__ */ e("g", {
+      filter: `url(#${a}-f)`, children: /* @__PURE__ */ i("g", {
+        clipPath: `url(#${a}-c)`, children: [
       /* @__PURE__ */ e(
-        "path",
-        {
-          d: "M8 45.3892V57.0525H34.1475V45.3892C34.1475 42.9072 33.4998 40.4681 32.2684 38.3131L31.2726 36.5705C30.0412 34.4155 29.3934 31.9764 29.3934 29.4944V15.4541H12.7541V29.4944C12.7541 31.9764 12.1064 34.4155 10.8749 36.5705L9.87916 38.3131C8.64773 40.4681 8 42.9072 8 45.3892Z",
-          fill: `url(#${a}-p0)`
-        }
-      ),
+          "path",
+          {
+            d: "M8 45.3892V57.0525H34.1475V45.3892C34.1475 42.9072 33.4998 40.4681 32.2684 38.3131L31.2726 36.5705C30.0412 34.4155 29.3934 31.9764 29.3934 29.4944V15.4541H12.7541V29.4944C12.7541 31.9764 12.1064 34.4155 10.8749 36.5705L9.87916 38.3131C8.64773 40.4681 8 42.9072 8 45.3892Z",
+            fill: `url(#${a}-p0)`
+          }
+        ),
       /* @__PURE__ */ e("path", { d: "M8 57.0525H34.1475V158.652H8V57.0525Z", fill: `url(#${a}-p1)` })
-    ] }) }),
+        ]
+      })
+    }),
     /* @__PURE__ */ e("path", { d: ot, style: { fill: r } }),
     /* @__PURE__ */ e("path", { d: ot, fill: `url(#${a}-p2)`, style: { mixBlendMode: "color-dodge" } }),
-    /* @__PURE__ */ i("g", { transform: `translate(13.943 ${n.ty})`, children: [
+    /* @__PURE__ */ i("g", {
+      transform: `translate(13.943 ${n.ty})`, children: [
       /* @__PURE__ */ e("path", { d: n.d, fill: `url(#${a}-tg)` }),
       /* @__PURE__ */ e("path", { d: n.d, fill: `url(#${a}-sh)` })
-    ] }),
-    /* @__PURE__ */ i("defs", { children: [
-      /* @__PURE__ */ i("filter", { id: `${a}-f`, x: "-0.262451", y: "10.1509", width: "43", height: "160", filterUnits: "userSpaceOnUse", colorInterpolationFilters: "sRGB", children: [
+      ]
+    }),
+    /* @__PURE__ */ i("defs", {
+      children: [
+      /* @__PURE__ */ i("filter", {
+        id: `${a}-f`, x: "-0.262451", y: "10.1509", width: "43", height: "160", filterUnits: "userSpaceOnUse", colorInterpolationFilters: "sRGB", children: [
         /* @__PURE__ */ e("feFlood", { floodOpacity: "0", result: "bg" }),
         /* @__PURE__ */ e("feColorMatrix", { in: "SourceAlpha", type: "matrix", values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0", result: "ha" }),
         /* @__PURE__ */ e("feOffset", { dy: "2" }),
@@ -600,40 +629,53 @@ function lt({ nib: t, color: r }) {
         /* @__PURE__ */ e("feColorMatrix", { type: "matrix", values: "0 0 0 0 0.45098 0 0 0 0 0.341176 0 0 0 0 0.290196 0 0 0 0.12 0" }),
         /* @__PURE__ */ e("feBlend", { mode: "normal", in2: "e1", result: "e2" }),
         /* @__PURE__ */ e("feBlend", { mode: "normal", in: "SourceGraphic", in2: "e2", result: "shape" })
-      ] }),
-      /* @__PURE__ */ i("linearGradient", { id: `${a}-sh`, x1: "21", y1: "0", x2: "21", y2: "16", gradientUnits: "userSpaceOnUse", children: [
+        ]
+      }),
+      /* @__PURE__ */ i("linearGradient", {
+        id: `${a}-sh`, x1: "21", y1: "0", x2: "21", y2: "16", gradientUnits: "userSpaceOnUse", children: [
         /* @__PURE__ */ e("stop", { stopColor: "#ffffff", stopOpacity: "0.24" }),
         /* @__PURE__ */ e("stop", { offset: "0.18", stopColor: "#ffffff", stopOpacity: "0.12" }),
         /* @__PURE__ */ e("stop", { offset: "0.42", stopColor: "#ffffff", stopOpacity: "0" })
-      ] }),
-      /* @__PURE__ */ i("linearGradient", { id: `${a}-p0`, x1: "8", y1: "37.1987", x2: "34.1475", y2: "37.1987", gradientUnits: "userSpaceOnUse", children: [
+        ]
+      }),
+      /* @__PURE__ */ i("linearGradient", {
+        id: `${a}-p0`, x1: "8", y1: "37.1987", x2: "34.1475", y2: "37.1987", gradientUnits: "userSpaceOnUse", children: [
         /* @__PURE__ */ e("stop", { stopColor: "#DBDBDB" }),
         /* @__PURE__ */ e("stop", { offset: "0.0637281", stopColor: "#EBEBEB" }),
         /* @__PURE__ */ e("stop", { offset: "0.178482", stopColor: "#DADADA" }),
         /* @__PURE__ */ e("stop", { offset: "0.48833", stopColor: "#F6F6F6" }),
         /* @__PURE__ */ e("stop", { offset: "0.757139", stopColor: "#EFEFEF" }),
         /* @__PURE__ */ e("stop", { offset: "1", stopColor: "#DDDDDD" })
-      ] }),
-      /* @__PURE__ */ i("linearGradient", { id: `${a}-p1`, x1: "8", y1: "110.162", x2: "34.1475", y2: "110.162", gradientUnits: "userSpaceOnUse", children: [
+        ]
+      }),
+      /* @__PURE__ */ i("linearGradient", {
+        id: `${a}-p1`, x1: "8", y1: "110.162", x2: "34.1475", y2: "110.162", gradientUnits: "userSpaceOnUse", children: [
         /* @__PURE__ */ e("stop", { stopColor: "#DBDBDB" }),
         /* @__PURE__ */ e("stop", { offset: "0.0637281", stopColor: "#EBEBEB" }),
         /* @__PURE__ */ e("stop", { offset: "0.178482", stopColor: "#DADADA" }),
         /* @__PURE__ */ e("stop", { offset: "0.48833", stopColor: "#F6F6F6" }),
         /* @__PURE__ */ e("stop", { offset: "0.757139", stopColor: "#EFEFEF" }),
         /* @__PURE__ */ e("stop", { offset: "1", stopColor: "#DDDDDD" })
-      ] }),
-      /* @__PURE__ */ i("linearGradient", { id: `${a}-p2`, x1: "8", y1: "62.9951", x2: "34.1475", y2: "62.9951", gradientUnits: "userSpaceOnUse", children: [
+        ]
+      }),
+      /* @__PURE__ */ i("linearGradient", {
+        id: `${a}-p2`, x1: "8", y1: "62.9951", x2: "34.1475", y2: "62.9951", gradientUnits: "userSpaceOnUse", children: [
         /* @__PURE__ */ e("stop", { stopColor: "#1D1D1D", stopOpacity: "0" }),
         /* @__PURE__ */ e("stop", { offset: "0.497299", stopColor: "#4F4F4F" }),
         /* @__PURE__ */ e("stop", { offset: "1", stopColor: "#313131", stopOpacity: "0" })
-      ] }),
+        ]
+      }),
       /* @__PURE__ */ e("clipPath", { id: `${a}-c`, children: /* @__PURE__ */ e("rect", { width: "144", height: "27", fill: "white", transform: "translate(7.73755 159.151) rotate(-90)" }) }),
-      /* @__PURE__ */ i("linearGradient", { id: `${a}-tg`, x1: "21", y1: "0", x2: "21", y2: "16", gradientUnits: "userSpaceOnUse", children: [
+      /* @__PURE__ */ i("linearGradient", {
+        id: `${a}-tg`, x1: "21", y1: "0", x2: "21", y2: "16", gradientUnits: "userSpaceOnUse", children: [
         /* @__PURE__ */ e("stop", { style: { stopColor: s } }),
         /* @__PURE__ */ e("stop", { offset: "1", style: { stopColor: r } })
-      ] })
-    ] })
-  ] });
+        ]
+      })
+      ]
+    })
+    ]
+  });
 }
 const r0 = ["chisel", "bullet", "fine"];
 function n0({ panelWidth: t = 360 }) {
@@ -651,95 +693,107 @@ function n0({ panelWidth: t = 360 }) {
       document.removeEventListener("mouseup", l), document.removeEventListener("touchend", l), document.body.classList.remove("df-armed"), document.body.style.removeProperty("--df-sel");
     };
   }, [a, h, p, u.color, u.glow]), // fixed placeholder; bloom surface absolute on top
-  /* @__PURE__ */ e("div", { className: "df-hltool", children: /* @__PURE__ */ e(
-    Q.div,
-    {
-      className: "df-hltool-bloom",
-      "data-open": a,
-      animate: { width: a ? t : 60, height: a ? 112 : 60, borderRadius: a ? 28 : 30 },
-      transition: r ? { duration: 0 } : { type: "spring", bounce: 0.26, duration: 0.5 },
-      children: /* @__PURE__ */ e(se, { initial: !1, mode: "wait", children: a ? /* @__PURE__ */ i(
-        Q.div,
-        {
-          className: "df-hltool-inner",
-          role: "group",
-          "aria-label": "Highlighters",
-          initial: { opacity: 0, y: 2 },
-          animate: { opacity: 1, y: 0 },
-          exit: { opacity: 0, y: -3, scale: 0.98 },
-          transition: { duration: 0.1 },
-          children: [
+  /* @__PURE__ */ e("div", {
+    className: "df-hltool", children: /* @__PURE__ */ e(
+      Q.div,
+      {
+        className: "df-hltool-bloom",
+        "data-open": a,
+        animate: { width: a ? t : 60, height: a ? 112 : 60, borderRadius: a ? 28 : 30 },
+        transition: r ? { duration: 0 } : { type: "spring", bounce: 0.26, duration: 0.5 },
+        children: /* @__PURE__ */ e(se, {
+          initial: !1, mode: "wait", children: a ? /* @__PURE__ */ i(
+            Q.div,
+            {
+              className: "df-hltool-inner",
+              role: "group",
+              "aria-label": "Highlighters",
+              initial: { opacity: 0, y: 2 },
+              animate: { opacity: 1, y: 0 },
+              exit: { opacity: 0, y: -3, scale: 0.98 },
+              transition: { duration: 0.1 },
+              children: [
             /* @__PURE__ */ e("button", { className: "df-hltool-handle", "aria-label": "Close highlighters", onClick: () => n(!1) }),
-            /* @__PURE__ */ i("div", { className: "df-hltool-row", children: [
-              /* @__PURE__ */ e("div", { className: "df-nibs", role: "group", "aria-label": "Nib", children: r0.map((l) => /* @__PURE__ */ e(
-                "button",
-                {
-                  type: "button",
-                  className: p === l && !h ? "df-nib is-active" : "df-nib",
-                  "aria-pressed": p === l && !h,
-                  "aria-label": `${l} nib`,
-                  title: l,
-                  onClick: () => {
-                    d(l), m(!1);
-                  },
-                  children: /* @__PURE__ */ e(lt, { nib: l, color: u.color })
-                },
-                l
-              )) }),
+            /* @__PURE__ */ i("div", {
+                className: "df-hltool-row", children: [
+              /* @__PURE__ */ e("div", {
+                  className: "df-nibs", role: "group", "aria-label": "Nib", children: r0.map((l) => /* @__PURE__ */ e(
+                    "button",
+                    {
+                      type: "button",
+                      className: p === l && !h ? "df-nib is-active" : "df-nib",
+                      "aria-pressed": p === l && !h,
+                      "aria-label": `${l} nib`,
+                      title: l,
+                      onClick: () => {
+                        d(l), m(!1);
+                      },
+                      children: /* @__PURE__ */ e(lt, { nib: l, color: u.color })
+                    },
+                    l
+                  ))
+                }),
               /* @__PURE__ */ e("span", { className: "df-hltool-div" }),
-              /* @__PURE__ */ e("div", { className: "df-dots", role: "group", "aria-label": "Colour", children: ze.map((l) => /* @__PURE__ */ e(
-                "button",
-                {
-                  type: "button",
-                  className: s === l.id && !h ? "df-dot is-active" : "df-dot",
-                  style: { "--dot": l.color },
-                  "data-glow": l.glow ? "true" : void 0,
-                  "aria-pressed": s === l.id && !h,
-                  "aria-label": l.label,
-                  title: l.label,
-                  onClick: () => {
-                    k(l.id), m(!1);
-                  }
-                },
-                l.id
-              )) }),
+              /* @__PURE__ */ e("div", {
+                  className: "df-dots", role: "group", "aria-label": "Colour", children: ze.map((l) => /* @__PURE__ */ e(
+                    "button",
+                    {
+                      type: "button",
+                      className: s === l.id && !h ? "df-dot is-active" : "df-dot",
+                      style: { "--dot": l.color },
+                      "data-glow": l.glow ? "true" : void 0,
+                      "aria-pressed": s === l.id && !h,
+                      "aria-label": l.label,
+                      title: l.label,
+                      onClick: () => {
+                        k(l.id), m(!1);
+                      }
+                    },
+                    l.id
+                  ))
+                }),
               /* @__PURE__ */ e("span", { className: "df-hltool-div" }),
               /* @__PURE__ */ e(
-                "button",
-                {
-                  type: "button",
-                  className: h ? "df-eraserbtn is-active" : "df-eraserbtn",
-                  "aria-pressed": h,
-                  "aria-label": "Eraser",
-                  title: "Eraser",
-                  onClick: () => m((l) => !l),
-                  children: /* @__PURE__ */ i("svg", { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.8", strokeLinecap: "round", strokeLinejoin: "round", children: [
+                  "button",
+                  {
+                    type: "button",
+                    className: h ? "df-eraserbtn is-active" : "df-eraserbtn",
+                    "aria-pressed": h,
+                    "aria-label": "Eraser",
+                    title: "Eraser",
+                    onClick: () => m((l) => !l),
+                    children: /* @__PURE__ */ i("svg", {
+                      viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.8", strokeLinecap: "round", strokeLinejoin: "round", children: [
                     /* @__PURE__ */ e("path", { d: "M8.5 20H20" }),
                     /* @__PURE__ */ e("path", { d: "M5 16.5l7.5-7.5a2.2 2.2 0 0 1 3.1 0l2.9 2.9a2.2 2.2 0 0 1 0 3.1L14.5 20H8z" })
-                  ] })
-                }
-              )
-            ] })
-          ]
-        },
-        "panel"
-      ) : /* @__PURE__ */ e(
-        Q.button,
-        {
-          type: "button",
-          className: "df-hltool-trigger",
-          initial: { opacity: 0 },
-          animate: { opacity: 1 },
-          exit: { opacity: 0 },
-          transition: { delay: 0.24, duration: 0.12 },
-          "aria-label": "Open highlighters",
-          onClick: () => n(!0),
-          children: /* @__PURE__ */ e("span", { className: "df-hltool-pen", children: /* @__PURE__ */ e(lt, { nib: "chisel", color: u.color }) })
-        },
-        "trigger"
-      ) })
-    }
-  ) });
+                      ]
+                    })
+                  }
+                )
+                ]
+              })
+              ]
+            },
+            "panel"
+          ) : /* @__PURE__ */ e(
+            Q.button,
+            {
+              type: "button",
+              className: "df-hltool-trigger",
+              initial: { opacity: 0 },
+              animate: { opacity: 1 },
+              exit: { opacity: 0 },
+              transition: { delay: 0.24, duration: 0.12 },
+              "aria-label": "Open highlighters",
+              onClick: () => n(!0),
+              children: /* @__PURE__ */ e("span", { className: "df-hltool-pen", children: /* @__PURE__ */ e(lt, { nib: "chisel", color: u.color }) })
+            },
+            "trigger"
+          )
+        })
+      }
+    )
+  });
 }
 const ke = {
   TL: { top: "8%", left: "3%" },
@@ -858,43 +912,45 @@ const dt = [
 ], c0 = ["onepiece", "workspace", "journal", "stationery"].map((t) => ve.find((r) => r.id === t)).filter((t) => !!t);
 function s0({ value: t, onChange: r }) {
   const a = re();
-  return /* @__PURE__ */ e("div", { className: "df-sticker-picker", role: "radiogroup", "aria-label": "Table sticker set", children: c0.map((n) => {
-    const s = t === n.id;
-    return /* @__PURE__ */ i(
-      "button",
-      {
-        type: "button",
-        className: s ? "df-sticker-choice is-active" : "df-sticker-choice",
-        role: "radio",
-        "aria-checked": s,
-        "aria-label": n.name,
-        title: n.name,
-        onClick: () => r(n.id),
-        children: [
-          s && /* @__PURE__ */ e(
-            Q.span,
-            {
-              className: "df-sticker-choice-thumb",
-              layoutId: "df-sticker-choice-thumb",
-              transition: a ? { duration: 0 } : { type: "spring", bounce: 0.28, duration: 0.36 }
-            }
-          ),
+  return /* @__PURE__ */ e("div", {
+    className: "df-sticker-picker", role: "radiogroup", "aria-label": "Table sticker set", children: c0.map((n) => {
+      const s = t === n.id;
+      return /* @__PURE__ */ i(
+        "button",
+        {
+          type: "button",
+          className: s ? "df-sticker-choice is-active" : "df-sticker-choice",
+          role: "radio",
+          "aria-checked": s,
+          "aria-label": n.name,
+          title: n.name,
+          onClick: () => r(n.id),
+          children: [
+            s && /* @__PURE__ */ e(
+              Q.span,
+              {
+                className: "df-sticker-choice-thumb",
+                layoutId: "df-sticker-choice-thumb",
+                transition: a ? { duration: 0 } : { type: "spring", bounce: 0.28, duration: 0.36 }
+              }
+            ),
           /* @__PURE__ */ e(
-            Q.img,
-            {
-              src: n.thumb,
-              alt: "",
-              draggable: !1,
-              decoding: "async",
-              animate: s ? { y: -2, scale: 1.06 } : { y: 0, scale: 1 },
-              transition: a ? { duration: 0 } : { type: "spring", bounce: 0.3, duration: 0.34 }
-            }
-          )
-        ]
-      },
-      n.id
-    );
-  }) });
+              Q.img,
+              {
+                src: n.thumb,
+                alt: "",
+                draggable: !1,
+                decoding: "async",
+                animate: s ? { y: -2, scale: 1.06 } : { y: 0, scale: 1 },
+                transition: a ? { duration: 0 } : { type: "spring", bounce: 0.3, duration: 0.34 }
+              }
+            )
+          ]
+        },
+        n.id
+      );
+    })
+  });
 }
 function xt(t, r, a) {
   const n = t >= 0 ? 1 : -1, s = Math.min(r, 6) * 0.06;
@@ -1075,24 +1131,31 @@ const Be = Mt.map((t) => ({ id: t.id, name: t.name })), Ye = (t) => /sticker-(cu
   { id: "aqua", name: "Aqua", src: B + "sticker-keyboard-blue.svg", swatch: "#8cbfe0" },
   { id: "orange", name: "Orange", src: B + "sticker-keyboard-orange.svg", swatch: "#e58e3e" },
   { id: "ruby", name: "Ruby", src: B + "sticker-keyboard-ruby.svg", swatch: "#e8635e" }
-], It = (t) => /* @__PURE__ */ i("svg", { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", ...t, children: [
+], It = (t) => /* @__PURE__ */ i("svg", {
+  viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", ...t, children: [
   /* @__PURE__ */ e("path", { d: "M16.4999 3.26621C17.3443 3.25421 20.1408 2.67328 20.7337 3.26621C21.3266 3.85913 20.7457 6.65559 20.7337 7.5M20.5059 3.49097L13.5021 10.4961" }),
   /* @__PURE__ */ e("path", { d: "M3.26636 16.5001C3.25436 17.3445 2.67343 20.141 3.26636 20.7339C3.85928 21.3268 6.65574 20.7459 7.50015 20.7339M10.502 13.4976L3.49824 20.5027" })
-] }), St = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", ...t, children: /* @__PURE__ */ e("path", { d: "M16.9767 19.5C19.4017 17.8876 21 15.1305 21 12C21 7.02944 16.9706 3 12 3C11.3126 3 10.6432 3.07706 10 3.22302M16.9767 19.5V16M16.9767 19.5H20.5M7 4.51555C4.58803 6.13007 3 8.87958 3 12C3 16.9706 7.02944 21 12 21C12.6874 21 13.3568 20.9229 14 20.777M7 4.51555V8M7 4.51555H3.5" }) }), Lt = (t) => /* @__PURE__ */ i("svg", { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", ...t, children: [
+  ]
+}), St = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", ...t, children: /* @__PURE__ */ e("path", { d: "M16.9767 19.5C19.4017 17.8876 21 15.1305 21 12C21 7.02944 16.9706 3 12 3C11.3126 3 10.6432 3.07706 10 3.22302M16.9767 19.5V16M16.9767 19.5H20.5M7 4.51555C4.58803 6.13007 3 8.87958 3 12C3 16.9706 7.02944 21 12 21C12.6874 21 13.3568 20.9229 14 20.777M7 4.51555V8M7 4.51555H3.5" }) }), Lt = (t) => /* @__PURE__ */ i("svg", {
+  viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", ...t, children: [
   /* @__PURE__ */ e("path", { d: "M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5" }),
   /* @__PURE__ */ e("path", { d: "M3 5.5H21M16.0557 5.5L15.3731 4.09173C14.9196 3.15626 14.6928 2.68852 14.3017 2.39681C14.215 2.3321 14.1231 2.27454 14.027 2.2247C13.5939 2 13.0741 2 12.0345 2C10.9688 2 10.436 2 9.99568 2.23412C9.8981 2.28601 9.80498 2.3459 9.71729 2.41317C9.32164 2.7167 9.10063 3.20155 8.65861 4.17126L8.05292 5.5" }),
   /* @__PURE__ */ e("path", { d: "M9.5 16.5L9.5 10.5" }),
   /* @__PURE__ */ e("path", { d: "M14.5 16.5L14.5 10.5" })
-] }), m0 = (t) => /* @__PURE__ */ i("svg", { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", ...t, children: [
+  ]
+}), m0 = (t) => /* @__PURE__ */ i("svg", {
+  viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", ...t, children: [
   /* @__PURE__ */ e("path", { d: "M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1" }),
   /* @__PURE__ */ e("path", { d: "M14 11a5 5 0 0 0-7.1 0l-2 2a5 5 0 0 0 7.1 7.1l1.1-1.1" })
-] }), He = "https://github.com/samrat-singh-rajput", ut = "df-dev-activity-link";
+  ]
+}), He = "https://github.com/samrat-singh-rajput", ut = "df-dev-activity-link";
 function g0(t) {
   const r = t.trim();
   return r ? /^[a-z][a-z0-9+.-]*:\/\//i.test(r) ? r : `https://${r}` : He;
 }
 function Et({ src: t }) {
-  return t === Ie ? /* @__PURE__ */ i("svg", { className: "df-lib-polaroid", viewBox: "0 0 40 36", "aria-hidden": "true", children: [
+  return t === Ie ? /* @__PURE__ */ i("svg", {
+    className: "df-lib-polaroid", viewBox: "0 0 40 36", "aria-hidden": "true", children: [
     /* @__PURE__ */ e("rect", { x: "4", y: "6", width: "32", height: "26", rx: "5", fill: "#f6f4ef", stroke: "#d8d2c8" }),
     /* @__PURE__ */ e("rect", { x: "4", y: "6", width: "32", height: "6", rx: "3", fill: "#eceae4" }),
     /* @__PURE__ */ e("rect", { x: "27", y: "9", width: "6", height: "2.6", rx: "1.3", fill: "#e15b5b" }),
@@ -1100,7 +1163,9 @@ function Et({ src: t }) {
     /* @__PURE__ */ e("circle", { cx: "20", cy: "21", r: "7.5", fill: "#2c2f33" }),
     /* @__PURE__ */ e("circle", { cx: "20", cy: "21", r: "4.4", fill: "#5b6168" }),
     /* @__PURE__ */ e("circle", { cx: "18", cy: "19", r: "1.5", fill: "#aeb6bd" })
-  ] }) : t === Se ? /* @__PURE__ */ i("svg", { className: "df-lib-ipod", viewBox: "0 0 40 56", "aria-hidden": "true", children: [
+    ]
+  }) : t === Se ? /* @__PURE__ */ i("svg", {
+    className: "df-lib-ipod", viewBox: "0 0 40 56", "aria-hidden": "true", children: [
     /* @__PURE__ */ e("rect", { x: "9", y: "3", width: "22", height: "50", rx: "4.5", fill: "#f7f7f5", stroke: "#d8d8d3" }),
     /* @__PURE__ */ e("rect", { x: "12", y: "8", width: "16", height: "16", rx: "1.8", fill: "#d7daf9", stroke: "#4b4e66", strokeWidth: "0.8" }),
     /* @__PURE__ */ e("rect", { x: "14", y: "11", width: "8", height: "1.4", rx: "0.7", fill: "#4b4e66", opacity: "0.75" }),
@@ -1109,7 +1174,8 @@ function Et({ src: t }) {
     /* @__PURE__ */ e("circle", { cx: "20", cy: "38", r: "10", fill: "#dedede", stroke: "#c8c8c8" }),
     /* @__PURE__ */ e("circle", { cx: "20", cy: "38", r: "4.2", fill: "#fff", stroke: "#d4d4d4" }),
     /* @__PURE__ */ e("path", { d: "M15 38h2.2M22.8 38H25M20 33v1.8M20 41.2v1.8", stroke: "#fff", strokeWidth: "1.4", strokeLinecap: "round" })
-  ] }) : t === _e ? /* @__PURE__ */ e("img", { className: "df-lib-name-tag", src: DF_BASE + "stickers/items/hello-name-tag.svg", alt: "", draggable: !1, loading: "lazy", decoding: "async" }) : /* @__PURE__ */ e("img", { src: t, alt: "", draggable: !1, loading: "lazy", decoding: "async" });
+    ]
+  }) : t === _e ? /* @__PURE__ */ e("img", { className: "df-lib-name-tag", src: DF_BASE + "stickers/items/hello-name-tag.svg", alt: "", draggable: !1, loading: "lazy", decoding: "async" }) : /* @__PURE__ */ e("img", { src: t, alt: "", draggable: !1, loading: "lazy", decoding: "async" });
 }
 function Rt(t) {
   var r;
@@ -1147,56 +1213,75 @@ function k0({ objectKey: t, kind: r, scale: a, rotate: n, flip: s, dx: k = 0, th
           animate: { opacity: 1 },
           transition: { duration: 0.14 },
           children: [
-            w === "menu" && /* @__PURE__ */ i("div", { className: "df-matmenu-rows", children: [
-              /* @__PURE__ */ i("button", { type: "button", className: "df-matmenu-row", onClick: () => g("resize"), children: [
+            w === "menu" && /* @__PURE__ */ i("div", {
+              className: "df-matmenu-rows", children: [
+              /* @__PURE__ */ i("button", {
+                type: "button", className: "df-matmenu-row", onClick: () => g("resize"), children: [
                 /* @__PURE__ */ e(It, { className: "df-matmenu-ico" }),
-                " Resize"
-              ] }),
-              r === "sticker" && /* @__PURE__ */ i("button", { type: "button", className: "df-matmenu-row", onClick: () => g("library"), children: [
+                  " Resize"
+                ]
+              }),
+                r === "sticker" && /* @__PURE__ */ i("button", {
+                  type: "button", className: "df-matmenu-row", onClick: () => g("library"), children: [
                 /* @__PURE__ */ e(St, { className: "df-matmenu-ico" }),
-                " Replace"
-              ] }),
-              r === "device" && /* @__PURE__ */ i("button", { type: "button", className: "df-matmenu-row", onClick: () => g("link"), children: [
+                    " Replace"
+                  ]
+                }),
+                r === "device" && /* @__PURE__ */ i("button", {
+                  type: "button", className: "df-matmenu-row", onClick: () => g("link"), children: [
                 /* @__PURE__ */ e(m0, { className: "df-matmenu-ico" }),
-                " Change link"
-              ] }),
-              p && /* @__PURE__ */ i("button", { type: "button", className: "df-matmenu-row", onClick: () => g("theme"), children: [
+                    " Change link"
+                  ]
+                }),
+                p && /* @__PURE__ */ i("button", {
+                  type: "button", className: "df-matmenu-row", onClick: () => g("theme"), children: [
                 /* @__PURE__ */ e("span", { className: "df-matmenu-ico df-matmenu-themedot", style: { background: (p.find((N) => N.src === T) ?? p[0]).swatch }, "aria-hidden": "true" }),
-                " Theme"
-              ] }),
-              /* @__PURE__ */ i("button", { type: "button", className: "df-matmenu-row df-matmenu-row--danger", onClick: () => {
-                v(t), F();
-              }, children: [
+                    " Theme"
+                  ]
+                }),
+              /* @__PURE__ */ i("button", {
+                  type: "button", className: "df-matmenu-row df-matmenu-row--danger", onClick: () => {
+                    v(t), F();
+                  }, children: [
                 /* @__PURE__ */ e(Lt, { className: "df-matmenu-ico" }),
-                " Delete"
-              ] })
-            ] }),
-            w === "resize" && /* @__PURE__ */ i("div", { className: "df-matmenu-resize", children: [
+                    " Delete"
+                  ]
+                })
+              ]
+            }),
+            w === "resize" && /* @__PURE__ */ i("div", {
+              className: "df-matmenu-resize", children: [
               /* @__PURE__ */ e(nt, { value: a, onChange: (N) => l(t, { scale: N }), min: 0.5, max: 1.8, step: 0.05, label: "Size", valueText: `${Math.round(a * 100)}%`, ariaLabel: "Object size" }),
               /* @__PURE__ */ e(nt, { value: n, onChange: (N) => l(t, { rotate: N }), min: -180, max: 180, step: 1, label: "Tilt", valueText: `${Math.round(n)}°`, ariaLabel: "Sticker rotation" }),
               /* @__PURE__ */ e("button", { type: "button", className: "df-matmenu-done", onClick: () => g("menu"), children: "Done" })
-            ] }),
-            w === "theme" && p && /* @__PURE__ */ i("div", { className: "df-matmenu-theme", children: [
-              /* @__PURE__ */ e("div", { className: "df-matmenu-theme-row", role: "radiogroup", "aria-label": "Keyboard colour", children: p.map((N) => {
-                const de = (T ?? p[0].src) === N.src;
-                return /* @__PURE__ */ e(
-                  "button",
-                  {
-                    type: "button",
-                    role: "radio",
-                    "aria-checked": de,
-                    "aria-label": N.name,
-                    title: N.name,
-                    className: de ? "df-matmenu-swatch is-active" : "df-matmenu-swatch",
-                    style: { background: N.swatch },
-                    onClick: () => l(t, { src: N.src })
-                  },
-                  N.id
-                );
-              }) }),
+              ]
+            }),
+            w === "theme" && p && /* @__PURE__ */ i("div", {
+              className: "df-matmenu-theme", children: [
+              /* @__PURE__ */ e("div", {
+                className: "df-matmenu-theme-row", role: "radiogroup", "aria-label": "Keyboard colour", children: p.map((N) => {
+                  const de = (T ?? p[0].src) === N.src;
+                  return /* @__PURE__ */ e(
+                    "button",
+                    {
+                      type: "button",
+                      role: "radio",
+                      "aria-checked": de,
+                      "aria-label": N.name,
+                      title: N.name,
+                      className: de ? "df-matmenu-swatch is-active" : "df-matmenu-swatch",
+                      style: { background: N.swatch },
+                      onClick: () => l(t, { src: N.src })
+                    },
+                    N.id
+                  );
+                })
+              }),
               /* @__PURE__ */ e("button", { type: "button", className: "df-matmenu-done", onClick: () => g("menu"), children: "Done" })
-            ] }),
-            w === "link" && /* @__PURE__ */ i("form", { className: "df-matmenu-link", onSubmit: ee, children: [
+              ]
+            }),
+            w === "link" && /* @__PURE__ */ i("form", {
+              className: "df-matmenu-link", onSubmit: ee, children: [
               /* @__PURE__ */ e("label", { className: "df-matmenu-link-label", htmlFor: `${t}-link`, children: "GitHub link" }),
               /* @__PURE__ */ e(
                 "input",
@@ -1208,59 +1293,66 @@ function k0({ objectKey: t, kind: r, scale: a, rotate: n, flip: s, dx: k = 0, th
                   onChange: (N) => Z(N.currentTarget.value)
                 }
               ),
-              /* @__PURE__ */ i("div", { className: "df-matmenu-link-actions", children: [
+              /* @__PURE__ */ i("div", {
+                className: "df-matmenu-link-actions", children: [
                 /* @__PURE__ */ e("button", { type: "button", className: "df-matmenu-link-btn", onClick: () => g("menu"), children: "Cancel" }),
                 /* @__PURE__ */ e("button", { type: "submit", className: "df-matmenu-link-btn df-matmenu-link-btn--primary", children: "Save" })
-              ] })
-            ] }),
-            w === "library" && /* @__PURE__ */ i("div", { className: "df-matmenu-lib", children: [
-              S.length === 0 ? /* @__PURE__ */ e("p", { className: "df-matmenu-lib-empty", children: "Nothing here that isn't already on the desk ✨" }) : /* @__PURE__ */ e(
-                Q.div,
-                {
-                  className: "df-matmenu-lib-grid",
-                  style: { gridTemplateColumns: `repeat(${K}, ${R}px)` },
-                  initial: h ? !1 : { opacity: 0 },
-                  animate: { opacity: 1 },
-                  transition: { duration: 0.15 },
-                  children: S.map((N) => /* @__PURE__ */ e(
+                ]
+              })
+              ]
+            }),
+            w === "library" && /* @__PURE__ */ i("div", {
+              className: "df-matmenu-lib", children: [
+                S.length === 0 ? /* @__PURE__ */ e("p", { className: "df-matmenu-lib-empty", children: "Nothing here that isn't already on the desk ✨" }) : /* @__PURE__ */ e(
+                  Q.div,
+                  {
+                    className: "df-matmenu-lib-grid",
+                    style: { gridTemplateColumns: `repeat(${K}, ${R}px)` },
+                    initial: h ? !1 : { opacity: 0 },
+                    animate: { opacity: 1 },
+                    transition: { duration: 0.15 },
+                    children: S.map((N) => /* @__PURE__ */ e(
+                      "button",
+                      {
+                        type: "button",
+                        className: "df-matmenu-lib-item",
+                        title: Rt(N),
+                        onClick: () => {
+                          l(t, { src: N }), F();
+                        },
+                        children: /* @__PURE__ */ e(Et, { src: N })
+                      },
+                      N
+                    ))
+                  },
+                  O
+                ),
+              /* @__PURE__ */ e("div", {
+                  className: "df-matmenu-tabs", role: "tablist", "aria-label": "Sticker categories", children: Be.map((N) => /* @__PURE__ */ i(
                     "button",
                     {
                       type: "button",
-                      className: "df-matmenu-lib-item",
-                      title: Rt(N),
-                      onClick: () => {
-                        l(t, { src: N }), F();
-                      },
-                      children: /* @__PURE__ */ e(Et, { src: N })
-                    },
-                    N
-                  ))
-                },
-                O
-              ),
-              /* @__PURE__ */ e("div", { className: "df-matmenu-tabs", role: "tablist", "aria-label": "Sticker categories", children: Be.map((N) => /* @__PURE__ */ i(
-                "button",
-                {
-                  type: "button",
-                  role: "tab",
-                  "aria-selected": N.id === O,
-                  className: N.id === O ? "df-matmenu-tab is-active" : "df-matmenu-tab",
-                  onClick: () => D(N.id),
-                  children: [
-                    N.id === O && /* @__PURE__ */ e(
-                      Q.span,
-                      {
-                        className: "df-matmenu-tab-bg",
-                        layoutId: "df-matmenu-tab-bg",
-                        transition: h ? { duration: 0 } : { type: "spring", bounce: 0.2, duration: 0.4 }
-                      }
-                    ),
+                      role: "tab",
+                      "aria-selected": N.id === O,
+                      className: N.id === O ? "df-matmenu-tab is-active" : "df-matmenu-tab",
+                      onClick: () => D(N.id),
+                      children: [
+                        N.id === O && /* @__PURE__ */ e(
+                          Q.span,
+                          {
+                            className: "df-matmenu-tab-bg",
+                            layoutId: "df-matmenu-tab-bg",
+                            transition: h ? { duration: 0 } : { type: "spring", bounce: 0.2, duration: 0.4 }
+                          }
+                        ),
                     /* @__PURE__ */ e("span", { className: "df-matmenu-tab-label", children: N.name })
-                  ]
-                },
-                N.id
-              )) })
-            ] })
+                      ]
+                    },
+                    N.id
+                  ))
+                })
+              ]
+            })
           ]
         },
         w
@@ -1465,18 +1557,20 @@ function Dt({
       baseSrc: l,
       themes: r.src === Qt ? h0 : void 0,
       onDraggingChange: s,
-      children: /* @__PURE__ */ e("div", { className: "df-sticker-scale", style: { transform: `scale(${h ? m * 1.06 : m}) rotate(${u}deg)` }, children: /* @__PURE__ */ e(
-        Q.img,
-        {
-          className: v ? "df-sticker-item df-sticker-stuck" : "df-sticker-item",
-          src: l,
-          alt: "",
-          draggable: !1,
-          decoding: "async",
-          ...(v ? o0 : xt)(r.rotate, a, n)
-        },
-        l
-      ) })
+      children: /* @__PURE__ */ e("div", {
+        className: "df-sticker-scale", style: { transform: `scale(${h ? m * 1.06 : m}) rotate(${u}deg)` }, children: /* @__PURE__ */ e(
+          Q.img,
+          {
+            className: v ? "df-sticker-item df-sticker-stuck" : "df-sticker-item",
+            src: l,
+            alt: "",
+            draggable: !1,
+            decoding: "async",
+            ...(v ? o0 : xt)(r.rotate, a, n)
+          },
+          l
+        )
+      })
     }
   );
 }
@@ -1502,40 +1596,54 @@ function b0({
       },
       ...xt(t.rotate, r, !!k),
       children: [
-        /* @__PURE__ */ i("svg", { className: "df-lamp-cast", viewBox: "0 0 200 200", preserveAspectRatio: "none", "aria-hidden": "true", children: [
-          /* @__PURE__ */ i("defs", { children: [
-            /* @__PURE__ */ i("linearGradient", { id: "lamp-beam", x1: "121", y1: "80", x2: "-480", y2: "300", gradientUnits: "userSpaceOnUse", children: [
+        /* @__PURE__ */ i("svg", {
+        className: "df-lamp-cast", viewBox: "0 0 200 200", preserveAspectRatio: "none", "aria-hidden": "true", children: [
+          /* @__PURE__ */ i("defs", {
+          children: [
+            /* @__PURE__ */ i("linearGradient", {
+            id: "lamp-beam", x1: "121", y1: "80", x2: "-480", y2: "300", gradientUnits: "userSpaceOnUse", children: [
               /* @__PURE__ */ e("stop", { offset: "0", stopColor: "#fff8e8", stopOpacity: "0.92" }),
               /* @__PURE__ */ e("stop", { offset: "0.09", stopColor: "#fff3cf", stopOpacity: "0.62" }),
               /* @__PURE__ */ e("stop", { offset: "0.24", stopColor: "#ffeab2", stopOpacity: "0.34" }),
               /* @__PURE__ */ e("stop", { offset: "0.48", stopColor: "#ffe7a6", stopOpacity: "0.15" }),
               /* @__PURE__ */ e("stop", { offset: "0.76", stopColor: "#ffe6a0", stopOpacity: "0.05" }),
               /* @__PURE__ */ e("stop", { offset: "1", stopColor: "#ffe6a0", stopOpacity: "0" })
-            ] }),
-            /* @__PURE__ */ i("radialGradient", { id: "lamp-pool", children: [
+            ]
+          }),
+            /* @__PURE__ */ i("radialGradient", {
+            id: "lamp-pool", children: [
               /* @__PURE__ */ e("stop", { offset: "0", stopColor: "#fff7e2", stopOpacity: "0.5" }),
               /* @__PURE__ */ e("stop", { offset: "0.55", stopColor: "#ffedbe", stopOpacity: "0.16" }),
               /* @__PURE__ */ e("stop", { offset: "1", stopColor: "#ffedbe", stopOpacity: "0" })
-            ] }),
-            /* @__PURE__ */ i("radialGradient", { id: "lamp-hole", children: [
+            ]
+          }),
+            /* @__PURE__ */ i("radialGradient", {
+            id: "lamp-hole", children: [
               /* @__PURE__ */ e("stop", { offset: "0.28", stopColor: "#000" }),
               /* @__PURE__ */ e("stop", { offset: "1", stopColor: "#fff" })
-            ] }),
+            ]
+          }),
             /* @__PURE__ */ e("filter", { id: "lamp-mblur", x: "-50%", y: "-50%", width: "200%", height: "200%", children: /* @__PURE__ */ e("feGaussianBlur", { stdDeviation: "10" }) }),
-            /* @__PURE__ */ i("mask", { id: "lamp-mask", children: [
+            /* @__PURE__ */ i("mask", {
+            id: "lamp-mask", children: [
               /* @__PURE__ */ e("rect", { x: "-900", y: "-500", width: "1400", height: "1500", fill: "#fff" }),
               /* @__PURE__ */ e("ellipse", { cx: "150", cy: "52", rx: "82", ry: "76", fill: "url(#lamp-hole)", filter: "url(#lamp-mblur)" })
-            ] }),
+            ]
+          }),
             /* @__PURE__ */ e("filter", { id: "lamp-pen", filterUnits: "userSpaceOnUse", x: "-820", y: "-140", width: "1180", height: "940", children: /* @__PURE__ */ e("feGaussianBlur", { stdDeviation: "14" }) }),
             /* @__PURE__ */ e("filter", { id: "lamp-umb", filterUnits: "userSpaceOnUse", x: "-820", y: "-140", width: "1180", height: "940", children: /* @__PURE__ */ e("feGaussianBlur", { stdDeviation: "7" }) }),
             /* @__PURE__ */ e("filter", { id: "lamp-b10", filterUnits: "userSpaceOnUse", x: "-820", y: "-140", width: "1180", height: "940", children: /* @__PURE__ */ e("feGaussianBlur", { stdDeviation: "10" }) })
-          ] }),
-          /* @__PURE__ */ i("g", { mask: "url(#lamp-mask)", children: [
+          ]
+        }),
+          /* @__PURE__ */ i("g", {
+          mask: "url(#lamp-mask)", children: [
             /* @__PURE__ */ e("path", { d: "M96 54 L-700 90 L-360 660 L150 104 Z", fill: "url(#lamp-beam)", opacity: "0.42", filter: "url(#lamp-pen)" }),
             /* @__PURE__ */ e("path", { d: "M106 60 L-650 125 L-370 560 L136 96 Z", fill: "url(#lamp-beam)", filter: "url(#lamp-umb)" }),
             /* @__PURE__ */ e("ellipse", { cx: "-150", cy: "210", rx: "150", ry: "82", transform: "rotate(-14 -150 210)", fill: "url(#lamp-pool)", filter: "url(#lamp-b10)" })
-          ] })
-        ] }),
+          ]
+        })
+        ]
+      }),
         /* @__PURE__ */ e("img", { className: "df-lamp-img", src: t.src, alt: "", draggable: !1, decoding: "async" })
       ]
     }
@@ -1543,20 +1651,24 @@ function b0({
 }
 function v0({ setId: t, compact: r = !1 }) {
   const a = re(), { overrides: n, activeKey: s } = Ae(), [k, p] = M(!1), d = ve.find((m) => m.id === t) ?? ve[0], h = d.items.filter((m) => !m.lamp).some((m, u) => `${d.id}-${u}-${m.src}` === s);
-  return /* @__PURE__ */ e("div", { className: ["df-stickers", k && "is-dragging", h && "has-active"].filter(Boolean).join(" "), children: /* @__PURE__ */ e(se, { children: d.items.filter((m) => !m.lamp).map((m, u) => ({ it: m, i: u, key: `${d.id}-${u}-${m.src}` })).filter(({ key: m }) => {
-    var u;
-    return !((u = n[m]) != null && u.deleted);
-  }).filter(({ it: m }) => !r || Ye(m.src) || /plant/.test(m.src)).map(({ it: m, i: u, key: l }) => /* @__PURE__ */ e(
-    Dt,
-    {
-      objectKey: l,
-      item: m,
-      index: u,
-      reduce: !!a,
-      onDraggingChange: p
-    },
-    l
-  )) }) });
+  return /* @__PURE__ */ e("div", {
+    className: ["df-stickers", k && "is-dragging", h && "has-active"].filter(Boolean).join(" "), children: /* @__PURE__ */ e(se, {
+      children: d.items.filter((m) => !m.lamp).map((m, u) => ({ it: m, i: u, key: `${d.id}-${u}-${m.src}` })).filter(({ key: m }) => {
+        var u;
+        return !((u = n[m]) != null && u.deleted);
+      }).filter(({ it: m }) => !r || Ye(m.src) || /plant/.test(m.src)).map(({ it: m, i: u, key: l }) => /* @__PURE__ */ e(
+        Dt,
+        {
+          objectKey: l,
+          item: m,
+          index: u,
+          reduce: !!a,
+          onDraggingChange: p
+        },
+        l
+      ))
+    })
+  });
 }
 function y0(t, r) {
   const a = Ye(t), n = r % 6, s = Math.floor(r / 6), k = [-7, 6, -4, 8, -5, 3][r % 6];
@@ -1572,20 +1684,24 @@ function w0({ added: t }) {
     var m;
     return !((m = a[h.key]) != null && m.deleted);
   }), d = p.some((h) => h.key === n);
-  return /* @__PURE__ */ e("div", { className: ["df-stickers", s && "is-dragging", d && "has-active"].filter(Boolean).join(" "), children: /* @__PURE__ */ e(se, { children: p.map((h, m) => {
-    const u = Number(h.key.slice(6));
-    return /* @__PURE__ */ e(
-      Dt,
-      {
-        objectKey: h.key,
-        item: y0(h.src, Number.isFinite(u) ? u : m),
-        index: m,
-        reduce: !!r,
-        onDraggingChange: k
-      },
-      h.key
-    );
-  }) }) });
+  return /* @__PURE__ */ e("div", {
+    className: ["df-stickers", s && "is-dragging", d && "has-active"].filter(Boolean).join(" "), children: /* @__PURE__ */ e(se, {
+      children: p.map((h, m) => {
+        const u = Number(h.key.slice(6));
+        return /* @__PURE__ */ e(
+          Dt,
+          {
+            objectKey: h.key,
+            item: y0(h.src, Number.isFinite(u) ? u : m),
+            index: m,
+            reduce: !!r,
+            onDraggingChange: k
+          },
+          h.key
+        );
+      })
+    })
+  });
 }
 function N0({ open: t, onToggle: r, onAdd: a }) {
   const n = re(), [s, k] = M(Be[0].id), p = Qe(() => ye.filter((v) => me.get(v) === s), [s]), d = 46, h = Math.min(6, Math.max(1, p.length)), m = Math.max(1, Math.ceil(p.length / h)), l = m * d + (m - 1) * 9 + 74;
@@ -1597,7 +1713,8 @@ function N0({ open: t, onToggle: r, onAdd: a }) {
       animate: { opacity: 1, scale: 1 },
       transition: n ? { duration: 0 } : { type: "spring", bounce: 0.4, duration: 0.5 },
       children: [
-        /* @__PURE__ */ e(se, { children: t && /* @__PURE__ */ i(
+        /* @__PURE__ */ e(se, {
+        children: t && /* @__PURE__ */ i(
           Q.div,
           {
             className: "df-add-panel",
@@ -1612,7 +1729,8 @@ function N0({ open: t, onToggle: r, onAdd: a }) {
               height: { duration: 0.4, ease: [0.22, 1, 0.36, 1] }
             },
             children: [
-              /* @__PURE__ */ e(se, { mode: "wait", initial: !1, children: /* @__PURE__ */ e(
+              /* @__PURE__ */ e(se, {
+              mode: "wait", initial: !1, children: /* @__PURE__ */ e(
                 Q.div,
                 {
                   className: "df-matmenu-lib-grid df-add-grid",
@@ -1624,8 +1742,10 @@ function N0({ open: t, onToggle: r, onAdd: a }) {
                   children: p.map((v) => /* @__PURE__ */ e("button", { type: "button", className: "df-matmenu-lib-item", title: Rt(v), onClick: () => a(v), children: /* @__PURE__ */ e(Et, { src: v }) }, v))
                 },
                 s
-              ) }),
-              /* @__PURE__ */ e("div", { className: "df-matmenu-tabs", role: "tablist", "aria-label": "Sticker categories", children: Be.map((v) => /* @__PURE__ */ i(
+              )
+            }),
+              /* @__PURE__ */ e("div", {
+              className: "df-matmenu-tabs", role: "tablist", "aria-label": "Sticker categories", children: Be.map((v) => /* @__PURE__ */ i(
                 "button",
                 {
                   type: "button",
@@ -1646,43 +1766,47 @@ function N0({ open: t, onToggle: r, onAdd: a }) {
                   ]
                 },
                 v.id
-              )) })
+              ))
+            })
             ]
           }
-        ) }),
-        /* @__PURE__ */ e(
-          "button",
-          {
-            type: "button",
-            className: t ? "df-add-fab is-open" : "df-add-fab",
-            "aria-label": t ? "Close sticker picker" : "Add a sticker to the desk",
-            "aria-expanded": t,
-            title: "Add a sticker",
-            onClick: () => r(!t),
-            children: /* @__PURE__ */ e(
-              Q.svg,
-              {
-                viewBox: "0 0 24 24",
-                fill: "none",
-                stroke: "currentColor",
-                strokeWidth: "2",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                "aria-hidden": "true",
-                animate: { rotate: t ? 45 : 0 },
-                transition: n ? { duration: 0 } : { type: "spring", bounce: 0.3, duration: 0.4 },
-                children: /* @__PURE__ */ e("path", { d: "M12 4.5v15M4.5 12h15" })
-              }
-            )
-          }
         )
+      }),
+        /* @__PURE__ */ e(
+        "button",
+        {
+          type: "button",
+          className: t ? "df-add-fab is-open" : "df-add-fab",
+          "aria-label": t ? "Close sticker picker" : "Add a sticker to the desk",
+          "aria-expanded": t,
+          title: "Add a sticker",
+          onClick: () => r(!t),
+          children: /* @__PURE__ */ e(
+            Q.svg,
+            {
+              viewBox: "0 0 24 24",
+              fill: "none",
+              stroke: "currentColor",
+              strokeWidth: "2",
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              "aria-hidden": "true",
+              animate: { rotate: t ? 45 : 0 },
+              transition: n ? { duration: 0 } : { type: "spring", bounce: 0.3, duration: 0.4 },
+              children: /* @__PURE__ */ e("path", { d: "M12 4.5v15M4.5 12h15" })
+            }
+          )
+        }
+      )
       ]
     }
   );
 }
 function Pt() {
-  return /* @__PURE__ */ i("div", { className: "df-polaroid", "aria-hidden": "true", children: [
-    /* @__PURE__ */ i("div", { className: "top", children: [
+  return /* @__PURE__ */ i("div", {
+    className: "df-polaroid", "aria-hidden": "true", children: [
+    /* @__PURE__ */ i("div", {
+      className: "top", children: [
       /* @__PURE__ */ e("div", { className: "flash" }),
       /* @__PURE__ */ e("div", { className: "timer" }),
       /* @__PURE__ */ e("div", { className: "sensor" }),
@@ -1692,17 +1816,23 @@ function Pt() {
       /* @__PURE__ */ e("div", { className: "toggle-container", children: /* @__PURE__ */ e("div", { className: "toggle" }) }),
       /* @__PURE__ */ e("div", { className: "power" }),
       /* @__PURE__ */ e("div", { className: "title" })
-    ] }),
-    /* @__PURE__ */ i("div", { className: "bottom", children: [
+      ]
+    }),
+    /* @__PURE__ */ i("div", {
+      className: "bottom", children: [
       /* @__PURE__ */ e("div", { className: "toggle-container", children: /* @__PURE__ */ e("div", { className: "toggle", children: /* @__PURE__ */ e("div", { className: "handle" }) }) }),
       /* @__PURE__ */ e("div", { className: "printer" }),
-      /* @__PURE__ */ i("div", { className: "labels", children: [
+      /* @__PURE__ */ i("div", {
+        className: "labels", children: [
         /* @__PURE__ */ e("div", { className: "rainbow" }),
         /* @__PURE__ */ e("div", { className: "logo", children: "Polaroid" }),
         /* @__PURE__ */ e("div", { className: "type" })
-      ] })
-    ] })
-  ] });
+        ]
+      })
+      ]
+    })
+    ]
+  });
 }
 const ht = 7, x0 = [
   0,
@@ -1745,59 +1875,77 @@ function C0({ href: t }) {
       draggable: !1,
       "aria-label": "View GitHub activity",
       title: "Open GitHub · hold to move",
-      children: /* @__PURE__ */ i("span", { className: "df-ipad-device", "aria-hidden": "true", children: [
+      children: /* @__PURE__ */ i("span", {
+        className: "df-ipad-device", "aria-hidden": "true", children: [
         /* @__PURE__ */ e("img", { className: "df-ipad-shell", src: DF_BASE + "stickers/devices/github-ipad.svg", alt: "", draggable: !1, decoding: "async" }),
-        /* @__PURE__ */ e("span", { className: "df-ipad-screen", children: /* @__PURE__ */ i("svg", { className: "df-ipad-ui", viewBox: "0 0 264 201", preserveAspectRatio: "xMidYMid meet", "aria-hidden": "true", children: [
-          /* @__PURE__ */ i("defs", { children: [
-            /* @__PURE__ */ i("radialGradient", { id: "df-ui-bg", cx: "0", cy: "0", r: "1", gradientTransform: "matrix(324 0 0 231 74 0)", gradientUnits: "userSpaceOnUse", children: [
+        /* @__PURE__ */ e("span", {
+          className: "df-ipad-screen", children: /* @__PURE__ */ i("svg", {
+            className: "df-ipad-ui", viewBox: "0 0 264 201", preserveAspectRatio: "xMidYMid meet", "aria-hidden": "true", children: [
+          /* @__PURE__ */ i("defs", {
+              children: [
+            /* @__PURE__ */ i("radialGradient", {
+                id: "df-ui-bg", cx: "0", cy: "0", r: "1", gradientTransform: "matrix(324 0 0 231 74 0)", gradientUnits: "userSpaceOnUse", children: [
               /* @__PURE__ */ e("stop", { offset: "0", stopColor: "#21303f" }),
               /* @__PURE__ */ e("stop", { offset: "0.68", stopColor: "#121c28" }),
               /* @__PURE__ */ e("stop", { offset: "1", stopColor: "#0c141d" })
-            ] }),
-            /* @__PURE__ */ i("linearGradient", { id: "df-ui-glare", x1: "0", y1: "0", x2: "112", y2: "88", gradientUnits: "userSpaceOnUse", children: [
+                ]
+              }),
+            /* @__PURE__ */ i("linearGradient", {
+                id: "df-ui-glare", x1: "0", y1: "0", x2: "112", y2: "88", gradientUnits: "userSpaceOnUse", children: [
               /* @__PURE__ */ e("stop", { offset: "0", stopColor: "#ffffff", stopOpacity: "0.12" }),
               /* @__PURE__ */ e("stop", { offset: "1", stopColor: "#ffffff", stopOpacity: "0" })
-            ] }),
-            /* @__PURE__ */ i("filter", { id: "df-ui-glow", x: "-50%", y: "-50%", width: "200%", height: "200%", children: [
+                ]
+              }),
+            /* @__PURE__ */ i("filter", {
+                id: "df-ui-glow", x: "-50%", y: "-50%", width: "200%", height: "200%", children: [
               /* @__PURE__ */ e("feGaussianBlur", { stdDeviation: "1.4", result: "b" }),
-              /* @__PURE__ */ i("feMerge", { children: [
+              /* @__PURE__ */ i("feMerge", {
+                  children: [
                 /* @__PURE__ */ e("feMergeNode", { in: "b" }),
                 /* @__PURE__ */ e("feMergeNode", { in: "SourceGraphic" })
-              ] })
-            ] })
-          ] }),
+                  ]
+                })
+                ]
+              })
+              ]
+            }),
           /* @__PURE__ */ e("rect", { className: "df-ui-bg", x: "0", y: "0", width: "264", height: "201", rx: "14" }),
           /* @__PURE__ */ e("path", { className: "df-ui-glare", d: "M0 0H142L0 104Z" }),
           /* @__PURE__ */ e("text", { className: "df-ui-title", x: "16", y: "24", children: "dev activity" }),
           /* @__PURE__ */ e("circle", { className: "df-ui-dot", cx: "221", cy: "19.5", r: "4", filter: "url(#df-ui-glow)" }),
           /* @__PURE__ */ e("text", { className: "df-ui-streak", x: "248", y: "24", children: "32" }),
-          x0.map((r, a) => {
-            const n = a % ht, s = Math.floor(a / ht);
-            return /* @__PURE__ */ e(
-              "rect",
-              {
-                className: "df-ui-cell",
-                "data-lvl": r,
-                x: 21 + n * 33,
-                y: 50 + s * 31,
-                width: "24",
-                height: "24",
-                rx: "9",
-                filter: r === 4 ? "url(#df-ui-glow)" : void 0
-              },
-              a
-            );
-          }),
-          /* @__PURE__ */ i("g", { className: "df-ui-tags", children: [
+              x0.map((r, a) => {
+                const n = a % ht, s = Math.floor(a / ht);
+                return /* @__PURE__ */ e(
+                  "rect",
+                  {
+                    className: "df-ui-cell",
+                    "data-lvl": r,
+                    x: 21 + n * 33,
+                    y: 50 + s * 31,
+                    width: "24",
+                    height: "24",
+                    rx: "9",
+                    filter: r === 4 ? "url(#df-ui-glow)" : void 0
+                  },
+                  a
+                );
+              }),
+          /* @__PURE__ */ i("g", {
+                className: "df-ui-tags", children: [
             /* @__PURE__ */ e("rect", { x: "16", y: "182", width: "40", height: "15", rx: "7.5" }),
             /* @__PURE__ */ e("text", { x: "36", y: "192.6", children: "React" }),
             /* @__PURE__ */ e("rect", { x: "61", y: "182", width: "29", height: "15", rx: "7.5" }),
             /* @__PURE__ */ e("text", { x: "75.5", y: "192.6", children: "SVG" }),
             /* @__PURE__ */ e("rect", { x: "95", y: "182", width: "47", height: "15", rx: "7.5" }),
             /* @__PURE__ */ e("text", { x: "118.5", y: "192.6", children: "Motion" })
-          ] })
-        ] }) })
-      ] })
+                ]
+              })
+            ]
+          })
+        })
+        ]
+      })
     }
   );
 }
@@ -1863,7 +2011,8 @@ function Bt({
     return document.addEventListener("pointerdown", v), document.addEventListener("keydown", I), () => {
       document.removeEventListener("pointerdown", v), document.removeEventListener("keydown", I);
     };
-  }, [k]), /* @__PURE__ */ i("div", { className: "df-picker", ref: d, children: [
+  }, [k]), /* @__PURE__ */ i("div", {
+    className: "df-picker", ref: d, children: [
     /* @__PURE__ */ i(
       "button",
       {
@@ -1880,38 +2029,41 @@ function Bt({
         ]
       }
     ),
-    /* @__PURE__ */ e(se, { children: k && /* @__PURE__ */ e(
-      Q.div,
-      {
-        className: "df-picker-pop",
-        role: "group",
-        "aria-label": t,
-        style: { left: "50%" },
-        variants: u,
-        initial: "hidden",
-        animate: "visible",
-        exit: "exit",
-        children: a.map((v) => /* @__PURE__ */ e(
-          Q.button,
-          {
-            type: "button",
-            className: r === v.id ? "df-sw is-active" : "df-sw",
-            style: { "--sw": v.swatch },
-            variants: l,
-            whileHover: s ? void 0 : { scale: 1.18, y: -2 },
-            whileTap: s ? void 0 : { scale: 0.9 },
-            "aria-pressed": r === v.id,
-            "aria-label": v.name,
-            title: v.name,
-            onClick: () => {
-              n(v.id), p(!1);
-            }
-          },
-          v.id
-        ))
-      }
-    ) })
-  ] });
+    /* @__PURE__ */ e(se, {
+      children: k && /* @__PURE__ */ e(
+        Q.div,
+        {
+          className: "df-picker-pop",
+          role: "group",
+          "aria-label": t,
+          style: { left: "50%" },
+          variants: u,
+          initial: "hidden",
+          animate: "visible",
+          exit: "exit",
+          children: a.map((v) => /* @__PURE__ */ e(
+            Q.button,
+            {
+              type: "button",
+              className: r === v.id ? "df-sw is-active" : "df-sw",
+              style: { "--sw": v.swatch },
+              variants: l,
+              whileHover: s ? void 0 : { scale: 1.18, y: -2 },
+              whileTap: s ? void 0 : { scale: 0.9 },
+              "aria-pressed": r === v.id,
+              "aria-label": v.name,
+              title: v.name,
+              onClick: () => {
+                n(v.id), p(!1);
+              }
+            },
+            v.id
+          ))
+        }
+      )
+    })
+    ]
+  });
 }
 function I0({ value: t, onChange: r }) {
   return /* @__PURE__ */ e(Bt, { label: "cover colour", value: t, onChange: r, options: Xe.map((a) => ({ id: a.id, name: a.name, swatch: a.base })) });
@@ -2131,14 +2283,14 @@ function B0({ onShuffle: t }) {
       },
       children: [
         /* @__PURE__ */ e(
-          Q.span,
-          {
-            className: "df-shuffle-icon",
-            animate: r ? void 0 : { rotate: a * 360 },
-            transition: r ? { duration: 0 } : { type: "spring", bounce: 0.32, duration: 0.6 },
-            children: /* @__PURE__ */ e(pe, {})
-          }
-        ),
+        Q.span,
+        {
+          className: "df-shuffle-icon",
+          animate: r ? void 0 : { rotate: a * 360 },
+          transition: r ? { duration: 0 } : { type: "spring", bounce: 0.32, duration: 0.6 },
+          children: /* @__PURE__ */ e(pe, {})
+        }
+      ),
         /* @__PURE__ */ e("span", { className: "df-picker-label", children: "surprise" })
       ]
     }
@@ -2146,75 +2298,106 @@ function B0({ onShuffle: t }) {
 }
 function _0() {
   const t = { type: "spring", bounce: 0.07, duration: 0.72, delay: 0.1 };
-  return /* @__PURE__ */ i("div", { className: "df-rollintro", "aria-hidden": "true", children: [
+  return /* @__PURE__ */ i("div", {
+    className: "df-rollintro", "aria-hidden": "true", children: [
     /* @__PURE__ */ e(Q.div, { className: "df-roll df-roll-l", initial: { x: 0 }, animate: { x: "-100.5%" }, transition: t, children: /* @__PURE__ */ e("span", { className: "df-roll-rod", children: /* @__PURE__ */ e("span", { className: "df-roll-sheen" }) }) }),
     /* @__PURE__ */ e(Q.div, { className: "df-roll df-roll-r", initial: { x: 0 }, animate: { x: "100.5%" }, transition: t, children: /* @__PURE__ */ e("span", { className: "df-roll-rod", children: /* @__PURE__ */ e("span", { className: "df-roll-sheen" }) }) })
-  ] });
+    ]
+  });
 }
-const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", ...t, children: /* @__PURE__ */ e("path", { d: "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" }) }), T0 = (t) => /* @__PURE__ */ i("svg", { viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", ...t, children: [
+const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", ...t, children: /* @__PURE__ */ e("path", { d: "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" }) }), T0 = (t) => /* @__PURE__ */ i("svg", {
+  viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", ...t, children: [
   /* @__PURE__ */ e("path", { d: "M7.03.084c-1.277.06-2.149.264-2.91.563a5.874 5.874 0 0 0-2.124 1.388 5.878 5.878 0 0 0-1.38 2.127C.321 4.926.12 5.8.064 7.076.008 8.354-.005 8.764.001 12.023c.007 3.259.021 3.667.083 4.947.061 1.277.264 2.149.563 2.911.308.789.72 1.457 1.388 2.123a5.872 5.872 0 0 0 2.129 1.38c.763.295 1.636.496 2.913.552 1.278.056 1.689.069 4.947.063 3.257-.007 3.668-.021 4.947-.082 1.28-.06 2.147-.265 2.91-.563a5.881 5.881 0 0 0 2.123-1.388 5.881 5.881 0 0 0 1.38-2.129c.295-.763.496-1.636.551-2.912.056-1.28.07-1.69.063-4.948-.006-3.258-.02-3.667-.081-4.947-.06-1.28-.264-2.148-.564-2.911a5.892 5.892 0 0 0-1.387-2.123 5.857 5.857 0 0 0-2.128-1.38C19.074.322 18.202.12 16.924.066 15.647.009 15.236-.006 11.977 0 8.718.008 8.31.021 7.03.084m.14 21.693c-1.17-.05-1.805-.245-2.228-.408a3.736 3.736 0 0 1-1.382-.895 3.695 3.695 0 0 1-.9-1.378c-.165-.423-.363-1.058-.417-2.228-.06-1.264-.072-1.644-.08-4.848-.006-3.204.006-3.583.062-4.848.05-1.169.246-1.805.408-2.228.216-.561.477-.96.895-1.382a3.705 3.705 0 0 1 1.379-.9c.423-.165 1.057-.361 2.227-.417 1.265-.06 1.644-.072 4.848-.08 3.203-.006 3.583.006 4.85.062 1.168.05 1.804.244 2.227.408.56.216.96.475 1.382.895.421.42.681.817.9 1.378.165.422.362 1.056.417 2.227.06 1.265.074 1.645.08 4.848.005 3.203-.006 3.583-.061 4.848-.051 1.17-.245 1.805-.408 2.23-.216.56-.477.96-.896 1.38a3.705 3.705 0 0 1-1.378.9c-.422.165-1.058.362-2.226.418-1.266.06-1.645.072-4.85.079-3.204.007-3.582-.006-4.848-.06m9.783-16.192a1.44 1.44 0 1 0 1.437-1.442 1.44 1.44 0 0 0-1.437 1.442M5.839 12.012a6.161 6.161 0 1 0 12.323-.024 6.162 6.162 0 0 0-12.323.024M8 12.008A4 4 0 1 1 12.008 16 4 4 0 0 1 8 12.008" })
-] }), $0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", ...t, children: /* @__PURE__ */ e("path", { d: "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" }) }), O0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", ...t, children: /* @__PURE__ */ e("path", { d: "M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z" }) }), H0 = /* @__PURE__ */ i("div", { className: "df-cover", children: [
+  ]
+}), $0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", ...t, children: /* @__PURE__ */ e("path", { d: "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" }) }), O0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true", ...t, children: /* @__PURE__ */ e("path", { d: "M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z" }) }), H0 = /* @__PURE__ */ i("div", {
+  className: "df-cover", children: [
   /* @__PURE__ */ e("span", { className: "df-cover-band", "aria-hidden": "true" }),
-  /* @__PURE__ */ i("div", { className: "df-cover-label", children: [
-    /* @__PURE__ */ i("span", { className: "df-cover-mark", "aria-hidden": "true", children: [
+  /* @__PURE__ */ i("div", {
+    className: "df-cover-label", children: [
+    /* @__PURE__ */ i("span", {
+      className: "df-cover-mark", "aria-hidden": "true", children: [
       /* @__PURE__ */ e("span", { className: "df-cover-mono", children: "MM" }),
       /* @__PURE__ */ e("svg", { className: "df-cover-cursor", viewBox: "0 0 24 24", fill: "currentColor", children: /* @__PURE__ */ e("path", { d: "M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" }) })
-    ] }),
+      ]
+    }),
     /* @__PURE__ */ e("p", { className: "df-cover-title", children: "Anuj Singh Rajput" }),
     /* @__PURE__ */ e("span", { className: "df-cover-sub", children: "anime + code" }),
     /* @__PURE__ */ e("span", { className: "df-cover-lines", "aria-hidden": "true" })
-  ] }),
-  /* @__PURE__ */ i("span", { className: "df-cover-hint", children: [
-    "tap to open ",
+    ]
+  }),
+  /* @__PURE__ */ i("span", {
+    className: "df-cover-hint", children: [
+      "tap to open ",
     /* @__PURE__ */ e("span", { className: "df-heart", "aria-hidden": "true", children: "♡" })
-  ] })
-] }), G0 = [
+    ]
+  })
+  ]
+}), G0 = [
   // spread 1 left: about
-  /* @__PURE__ */ i("div", { className: "df-page", children: [
+  /* @__PURE__ */ i("div", {
+  className: "df-page", children: [
     /* @__PURE__ */ e(pe, { className: "df-doodle", style: { top: 2, right: 6, width: 16, height: 16 } }),
     /* @__PURE__ */ e(De, { className: "df-doodle df-doodle--soft", style: { bottom: 118, right: 26, width: 27, height: 27, transform: "rotate(-12deg)" } }),
     /* @__PURE__ */ e(pe, { className: "df-doodle df-doodle--soft df-doodle--lilac", style: { bottom: 165, right: 74, width: 14, height: 14 } }),
-    /* @__PURE__ */ i("h3", { className: "df-hello", children: [
+    /* @__PURE__ */ i("h3", {
+    className: "df-hello", children: [
       "about me ",
       /* @__PURE__ */ e("span", { className: "df-heart", "aria-hidden": "true", children: "♡" })
-    ] }),
-    /* @__PURE__ */ i("div", { className: "df-about-head", children: [
+    ]
+  }),
+    /* @__PURE__ */ i("div", {
+    className: "df-about-head", children: [
       /* @__PURE__ */ e("span", { className: "df-avatar df-avatar--big", children: /* @__PURE__ */ e("img", { src: DF_BASE + "anuj-profile.jpg", alt: "Anuj Singh Rajput", loading: "lazy", decoding: "async" }) }),
-      /* @__PURE__ */ i("div", { children: [
+      /* @__PURE__ */ i("div", {
+      children: [
         /* @__PURE__ */ e(ue, { className: "df-name", placeholder: "your name", initial: "Anuj Singh Rajput" }),
-        /* @__PURE__ */ i("span", { className: "df-role", children: [
+        /* @__PURE__ */ i("span", {
+        className: "df-role", children: [
           /* @__PURE__ */ e(pe, {}),
           " B.Tech Computer Engineering"
-        ] })
-      ] })
-    ] }),
-    /* @__PURE__ */ e("div", { className: "df-card", children: /* @__PURE__ */ e(
+        ]
+      })
+      ]
+    })
+    ]
+  }),
+    /* @__PURE__ */ e("div", {
+    className: "df-card", children: /* @__PURE__ */ e(
       ue,
       {
         className: "df-edit--body",
         placeholder: "a little about you…",
         initial: "Final-year B.Tech Computer Engineering student (CGPA: 8.06/10) with hands-on experience developing a full-stack Blood Bank & Donor Management System using React, Node.js, and Google Gemini AI. Strong foundation in object-oriented programming, REST APIs, and data structures & algorithms ✨"
       }
-    ) }),
+    )
+  }),
     /* @__PURE__ */ e("p", { className: "df-label df-label--push", children: "currently…" }),
-    /* @__PURE__ */ i("span", { className: "df-date", children: [
+    /* @__PURE__ */ i("span", {
+    className: "df-date", children: [
       /* @__PURE__ */ e(De, {}),
       " open to freelance & collabs"
-    ] })
-  ] }, "p0"),
+    ]
+  })
+  ]
+}, "p0"),
   // spread 1 right: skills
-  /* @__PURE__ */ i("div", { className: "df-page", children: [
+  /* @__PURE__ */ i("div", {
+  className: "df-page", children: [
     /* @__PURE__ */ e(st, { className: "df-doodle df-doodle--lilac", style: { top: 0, right: 4, width: 26, height: 26 } }),
     /* @__PURE__ */ e(De, { className: "df-doodle df-doodle--soft", style: { bottom: 96, right: 34, width: 26, height: 26, transform: "rotate(10deg)" } }),
     /* @__PURE__ */ e(pe, { className: "df-doodle df-doodle--soft df-doodle--lilac", style: { bottom: 150, left: 14, width: 18, height: 18 } }),
     /* @__PURE__ */ e(st, { className: "df-doodle df-doodle--soft df-doodle--mint", style: { bottom: 60, left: 30, width: 24, height: 24 } }),
     /* @__PURE__ */ e("h3", { className: "df-hello df-hello--lilac", children: "skills" }),
-    /* @__PURE__ */ i("div", { className: "df-card df-card--lilac", children: [
-      /* @__PURE__ */ i("p", { className: "df-card-title", children: [
+    /* @__PURE__ */ i("div", {
+    className: "df-card df-card--lilac", children: [
+      /* @__PURE__ */ i("p", {
+      className: "df-card-title", children: [
         /* @__PURE__ */ e(pe, {}),
         " i build with"
-      ] }),
-      /* @__PURE__ */ i("ul", { className: "df-tags", children: [
+      ]
+    }),
+      /* @__PURE__ */ i("ul", {
+      className: "df-tags", children: [
         /* @__PURE__ */ e("li", { className: "df-tag", children: "React.js" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "Node.js" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "Express js" }),
@@ -2224,231 +2407,340 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
         /* @__PURE__ */ e("li", { className: "df-tag", children: "Java" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "C" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "PHP" })
-      ] })
-    ] }),
-    /* @__PURE__ */ i("div", { className: "df-card", children: [
-      /* @__PURE__ */ i("p", { className: "df-card-title", children: [
+      ]
+    })
+    ]
+  }),
+    /* @__PURE__ */ i("div", {
+    className: "df-card", children: [
+      /* @__PURE__ */ i("p", {
+      className: "df-card-title", children: [
         /* @__PURE__ */ e(De, {}),
         " i care about"
-      ] }),
-      /* @__PURE__ */ i("ul", { className: "df-tags df-tags--blush", children: [
+      ]
+    }),
+      /* @__PURE__ */ i("ul", {
+      className: "df-tags df-tags--blush", children: [
         /* @__PURE__ */ e("li", { className: "df-tag", children: "AI-driven solutions" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "algorithms" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "system design" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "full-stack dev" })
-      ] })
-    ] }),
-    /* @__PURE__ */ i("div", { className: "df-card df-card--mint", children: [
-      /* @__PURE__ */ i("p", { className: "df-card-title", children: [
+      ]
+    })
+    ]
+  }),
+    /* @__PURE__ */ i("div", {
+    className: "df-card df-card--mint", children: [
+      /* @__PURE__ */ i("p", {
+      className: "df-card-title", children: [
         /* @__PURE__ */ e(st, {}),
         " Soft skills:"
-      ] }),
-      /* @__PURE__ */ i("ul", { className: "df-tags df-tags--mint", children: [
+      ]
+    }),
+      /* @__PURE__ */ i("ul", {
+      className: "df-tags df-tags--mint", children: [
         /* @__PURE__ */ e("li", { className: "df-tag", children: "Effective Communication" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "Quick learner" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "problem-solving" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "decision-making" }),
         /* @__PURE__ */ e("li", { className: "df-tag", children: "teamwork" })
-      ] })
-    ] })
-  ] }, "p1"),
+      ]
+    })
+    ]
+  })
+  ]
+}, "p1"),
   // spread 2 left: selected work
-  /* @__PURE__ */ i("div", { className: "df-page", children: [
+  /* @__PURE__ */ i("div", {
+  className: "df-page", children: [
     /* @__PURE__ */ e("h3", { className: "df-hello", children: "Projects" }),
-    /* @__PURE__ */ i("div", { className: "df-proj", children: [
-      /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
+    /* @__PURE__ */ i("div", {
+    className: "df-proj", children: [
+      /* @__PURE__ */ i("p", {
+      className: "df-proj-head", children: [
         /* @__PURE__ */ e($e, { href: "https://blood-bank-management-system-ecru.vercel.app/", variant: 0, children: "Blood Bank System" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Full-Stack Web App" })
-      ] }),
-      /* @__PURE__ */ i("ul", { style: { margin: "0.3rem 0 0.5rem", paddingLeft: "1.1rem", fontSize: "0.85rem", lineHeight: "1.45", display: "flex", flexDirection: "column", gap: "0.35rem", color: "var(--df-ink)" }, children: [
+      ]
+    }),
+      /* @__PURE__ */ i("ul", {
+      style: { margin: "0.3rem 0 0.5rem", paddingLeft: "1.1rem", fontSize: "0.85rem", lineHeight: "1.45", display: "flex", flexDirection: "column", gap: "0.35rem", color: "var(--df-ink)" }, children: [
         /* @__PURE__ */ e("li", { children: "Developed a full-stack web application enabling donors, recipients, and blood banks to coordinate blood availability and requests through a centralized platform." }),
         /* @__PURE__ */ e("li", { children: "Implemented user authentication, donor registration, and blood inventory management, including search functionality by blood group and location." }),
         /* @__PURE__ */ e("li", { children: "Developed and deployed a scalable full-stack web application using React.js, TypeScript, Node.js, Express.js, MongoDB Atlas, REST APIs, and Google Gemini AI for intelligent user assistance." })
-      ] }),
-      /* @__PURE__ */ i("div", { style: { display: "flex", flexWrap: "wrap", gap: "0.4rem", marginTop: "0.5rem" }, children: [
+      ]
+    }),
+      /* @__PURE__ */ i("div", {
+      style: { display: "flex", flexWrap: "wrap", gap: "0.4rem", marginTop: "0.5rem" }, children: [
         /* @__PURE__ */ i("a", {
-          href: "https://blood-bank-management-system-ecru.vercel.app/",
-          target: "_blank",
-          rel: "noreferrer",
-          className: "df-tag",
-          style: { textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.3rem", background: "var(--df-blush-deep)", color: "#fff", padding: "0.25rem 0.7rem", borderRadius: "999px", fontSize: "0.78rem", fontWeight: "600", boxShadow: "0 2px 5px rgba(0,0,0,0.12)" },
-          children: [
-            /* @__PURE__ */ i("svg", { width: 13, height: 13, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", children: [
+        href: "https://blood-bank-management-system-ecru.vercel.app/",
+        target: "_blank",
+        rel: "noreferrer",
+        className: "df-tag",
+        style: { textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.3rem", background: "var(--df-blush-deep)", color: "#fff", padding: "0.25rem 0.7rem", borderRadius: "999px", fontSize: "0.78rem", fontWeight: "600", boxShadow: "0 2px 5px rgba(0,0,0,0.12)" },
+        children: [
+            /* @__PURE__ */ i("svg", {
+          width: 13, height: 13, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", children: [
               /* @__PURE__ */ e("path", { d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" }),
               /* @__PURE__ */ e("polyline", { points: "15 3 21 3 21 9" }),
               /* @__PURE__ */ e("line", { x1: 10, y1: 14, x2: 21, y2: 3 })
-            ] }),
-            " Live Project"
           ]
         }),
+          " Live Project"
+        ]
+      }),
         /* @__PURE__ */ i("a", {
-          href: "https://github.com/samrat-singh-rajput/blood-bank-management-systemtoday",
-          target: "_blank",
-          rel: "noreferrer",
-          className: "df-tag",
-          style: { textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.3rem", background: "color-mix(in srgb, var(--df-ink) 85%, black)", color: "#fff", padding: "0.25rem 0.7rem", borderRadius: "999px", fontSize: "0.78rem", fontWeight: "600", boxShadow: "0 2px 5px rgba(0,0,0,0.12)" },
-          children: [
-            /* @__PURE__ */ i("svg", { width: 13, height: 13, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", children: [
+        href: "https://github.com/samrat-singh-rajput/blood-bank-management-systemtoday",
+        target: "_blank",
+        rel: "noreferrer",
+        className: "df-tag",
+        style: { textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.3rem", background: "color-mix(in srgb, var(--df-ink) 85%, black)", color: "#fff", padding: "0.25rem 0.7rem", borderRadius: "999px", fontSize: "0.78rem", fontWeight: "600", boxShadow: "0 2px 5px rgba(0,0,0,0.12)" },
+        children: [
+            /* @__PURE__ */ i("svg", {
+          width: 13, height: 13, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", children: [
               /* @__PURE__ */ e("path", { d: "M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" })
-            ] }),
-            " GitHub Repo"
           ]
-        })
-      ] })
-    ] })
-  ] }, "p2"),
+        }),
+          " GitHub Repo"
+        ]
+      })
+      ]
+    })
+    ]
+  })
+  ]
+}, "p2"),
   // spread 2 right: more work
-  /* @__PURE__ */ i("div", { className: "df-page", children: [
+  /* @__PURE__ */ i("div", {
+  className: "df-page", children: [
     /* @__PURE__ */ e(pe, { className: "df-doodle df-doodle--butter", style: { bottom: 16, right: 12, width: 22, height: 22 } }),
     /* @__PURE__ */ e("h3", { className: "df-hello df-hello--lilac", children: "more work" }),
-    /* @__PURE__ */ i("div", { className: "df-proj", children: [
-      /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
+    /* @__PURE__ */ i("div", {
+    className: "df-proj", children: [
+      /* @__PURE__ */ i("p", {
+      className: "df-proj-head", children: [
         /* @__PURE__ */ e($e, { href: "https://github.com/samrat-singh-rajput", variant: 2, children: "CodeChef Assessment" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Competitive Programming" })
-      ] }),
+      ]
+    }),
       /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", style: { fontSize: "0.85rem", lineHeight: "1.45" }, placeholder: "describe it…", initial: "Scored 2,600/3,000 (86%) in CodeChef C Language Skill Test, demonstrating strong programming fundamentals." })
-    ] }),
-    /* @__PURE__ */ i("div", { className: "df-proj", children: [
-      /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
+    ]
+  }),
+    /* @__PURE__ */ i("div", {
+    className: "df-proj", children: [
+      /* @__PURE__ */ i("p", {
+      className: "df-proj-head", children: [
         /* @__PURE__ */ e($e, { href: "https://github.com/samrat-singh-rajput", variant: 3, children: "AI Solutions" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Prompt Engineering" })
-      ] }),
+      ]
+    }),
       /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", style: { fontSize: "0.85rem", lineHeight: "1.45" }, placeholder: "describe it…", initial: "Building practical AI-driven solutions leveraging tools like Google Gemini AI for intelligent systems." })
-    ] }),
-    /* @__PURE__ */ i("div", { className: "df-proj", children: [
-      /* @__PURE__ */ i("p", { className: "df-proj-head", children: [
+    ]
+  }),
+    /* @__PURE__ */ i("div", {
+    className: "df-proj", children: [
+      /* @__PURE__ */ i("p", {
+      className: "df-proj-head", children: [
         /* @__PURE__ */ e($e, { href: "https://github.com/samrat-singh-rajput", variant: 1, children: "Tech Fundamentals" }),
         /* @__PURE__ */ e("span", { className: "df-proj-meta", children: "Data Structures & Algorithms" })
-      ] }),
+      ]
+    }),
       /* @__PURE__ */ e(ue, { className: "df-edit--body df-proj-desc", style: { fontSize: "0.85rem", lineHeight: "1.45" }, placeholder: "describe it…", initial: "Strong foundation in object-oriented programming, DBMS, Operating Systems, and REST APIs." })
-    ] }),
-    /* @__PURE__ */ i("p", { className: "df-sig", children: [
+    ]
+  }),
+    /* @__PURE__ */ i("p", {
+    className: "df-sig", children: [
       "…and more on the shelf ",
       /* @__PURE__ */ e("span", { className: "df-heart", "aria-hidden": "true", children: "♡" })
-    ] })
-  ] }, "p3"),
+    ]
+  })
+  ]
+}, "p3"),
   // spread 3 left: experience timeline
-  /* @__PURE__ */ i("div", { className: "df-page", children: [
-    /* @__PURE__ */ e("h3", { className: "df-hello", children: "education & certs" }),
-    /* @__PURE__ */ i("ul", { className: "df-xp", children: [
-      /* @__PURE__ */ i("li", { className: "df-xp-row", children: [
+  /* @__PURE__ */ i("div", {
+  className: "df-page", children: [
+    /* @__PURE__ */ e("h3", { className: "df-hello", children: "Education & Certs" }),
+    /* @__PURE__ */ i("ul", {
+    className: "df-xp", children: [
+      /* @__PURE__ */ i("li", {
+      className: "df-xp-row", children: [
         /* @__PURE__ */ e("span", { className: "df-xp-dot", "aria-hidden": "true" }),
-        /* @__PURE__ */ i("div", { children: [
+        /* @__PURE__ */ i("div", {
+        children: [
           /* @__PURE__ */ e("p", { className: "df-xp-role", children: "B.Tech Computer Engineering" }),
           /* @__PURE__ */ e("p", { className: "df-xp-meta", children: "Ganpat University, Gujarat · 2023-2027" })
-        ] })
-      ] }),
-      /* @__PURE__ */ i("li", { className: "df-xp-row", children: [
+        ]
+      })
+      ]
+    }),
+      /* @__PURE__ */ i("li", {
+      className: "df-xp-row", children: [
         /* @__PURE__ */ e("span", { className: "df-xp-dot", "aria-hidden": "true" }),
-        /* @__PURE__ */ i("div", { children: [
+        /* @__PURE__ */ i("div", {
+        children: [
           /* @__PURE__ */ e("p", { className: "df-xp-role", children: "Certifications" }),
           /* @__PURE__ */ e("p", { className: "df-xp-meta", children: "Simplilearn (AI, Cloud, Python, MERN)" })
-        ] })
-      ] }),
-      /* @__PURE__ */ i("li", { className: "df-xp-row", children: [
+        ]
+      })
+      ]
+    }),
+      /* @__PURE__ */ i("li", {
+      className: "df-xp-row", children: [
         /* @__PURE__ */ e("span", { className: "df-xp-dot", "aria-hidden": "true" }),
-        /* @__PURE__ */ i("div", { children: [
+        /* @__PURE__ */ i("div", {
+        children: [
           /* @__PURE__ */ e("p", { className: "df-xp-role", children: "Higher Secondary Education (NEB)" }),
           /* @__PURE__ */ e("p", { className: "df-xp-meta", children: "Score: 77% · Secondary Education (SEE): 80%" })
-        ] })
-      ] })
-    ] })
-  ] }, "p4"),
+        ]
+      })
+      ]
+    })
+    ]
+  })
+  ]
+}, "p4"),
   // spread 3 right: contact
-  /* @__PURE__ */ i("div", { className: "df-page", children: [
+  /* @__PURE__ */ i("div", {
+  className: "df-page", children: [
     /* @__PURE__ */ e(De, { className: "df-doodle", style: { top: 2, right: 6, width: 16, height: 16 } }),
-    /* @__PURE__ */ i("h3", { className: "df-hello df-hello--lilac", children: [
+    /* @__PURE__ */ i("h3", {
+    className: "df-hello df-hello--lilac", children: [
       "say hi ",
       /* @__PURE__ */ e("span", { className: "df-heart", "aria-hidden": "true", children: "♡" })
-    ] }),
+    ]
+  }),
     /* @__PURE__ */ e(
-      ue,
-      {
-        className: "df-edit--body",
-        placeholder: "a friendly note…",
-        initial: "Got a project, a collab idea, or want to build practical AI-driven solutions? I'd love to hear from you."
-      }
-    ),
-    /* @__PURE__ */ i("ul", { className: "df-links", children: [
-      /* @__PURE__ */ e("li", { children: /* @__PURE__ */ i("a", { className: "df-link", href: "https://github.com/samrat-singh-rajput", target: "_blank", rel: "noreferrer", children: [
+    ue,
+    {
+      className: "df-edit--body",
+      placeholder: "a friendly note…",
+      initial: "Got a project, a collab idea, or want to build practical AI-driven solutions? I'd love to hear from you."
+    }
+  ),
+    /* @__PURE__ */ i("ul", {
+    className: "df-links", children: [
+      /* @__PURE__ */ e("li", {
+      children: /* @__PURE__ */ i("a", {
+        className: "df-link", href: "https://github.com/samrat-singh-rajput", target: "_blank", rel: "noreferrer", children: [
         /* @__PURE__ */ e(A0, {}),
-        " GitHub"
-      ] }) }),
-      /* @__PURE__ */ e("li", { children: /* @__PURE__ */ i("a", { className: "df-link", href: "https://www.linkedin.com/in/samrat-singh-rajput", target: "_blank", rel: "noreferrer", children: [
-        /* @__PURE__ */ i("svg", { width: 16, height: 16, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", className: "df-icon", children: [
+          " GitHub"
+        ]
+      })
+    }),
+      /* @__PURE__ */ e("li", {
+      children: /* @__PURE__ */ i("a", {
+        className: "df-link", href: "https://www.linkedin.com/in/samrat-singh-rajput", target: "_blank", rel: "noreferrer", children: [
+        /* @__PURE__ */ i("svg", {
+          width: 16, height: 16, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", className: "df-icon", children: [
           /* @__PURE__ */ e("path", { d: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" }),
           /* @__PURE__ */ e("rect", { x: 2, y: 9, width: 4, height: 12 }),
           /* @__PURE__ */ e("circle", { cx: 4, cy: 4, r: 2 })
-        ] }),
-        " LinkedIn"
-      ] }) }),
-      /* @__PURE__ */ e("li", { children: /* @__PURE__ */ i("a", { className: "df-link", href: "mailto:asrajputchauhan@gmail.com", children: [
+          ]
+        }),
+          " LinkedIn"
+        ]
+      })
+    }),
+      /* @__PURE__ */ e("li", {
+      children: /* @__PURE__ */ i("a", {
+        className: "df-link", href: "mailto:asrajputchauhan@gmail.com", children: [
         /* @__PURE__ */ e($0, {}),
-        " Email"
-      ] }) }),
-      /* @__PURE__ */ e("li", { children: /* @__PURE__ */ i("a", { className: "df-link", href: "https://blood-bank-management-system-ecru.vercel.app/", target: "_blank", rel: "noreferrer", children: [
-        /* @__PURE__ */ i("svg", { width: 16, height: 16, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", className: "df-icon", children: [
+          " Email"
+        ]
+      })
+    }),
+      /* @__PURE__ */ e("li", {
+      children: /* @__PURE__ */ i("a", {
+        className: "df-link", href: "https://blood-bank-management-system-ecru.vercel.app/", target: "_blank", rel: "noreferrer", children: [
+        /* @__PURE__ */ i("svg", {
+          width: 16, height: 16, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", className: "df-icon", children: [
           /* @__PURE__ */ e("path", { d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" }),
           /* @__PURE__ */ e("polyline", { points: "15 3 21 3 21 9" }),
           /* @__PURE__ */ e("line", { x1: 10, y1: 14, x2: 21, y2: 3 })
-        ] }),
-        " Blood Bank System"
-      ] }) })
-    ] }),
-    /* @__PURE__ */ i("p", { className: "df-sig", children: [
+          ]
+        }),
+          " Blood Bank System"
+        ]
+      })
+    })
+    ]
+  }),
+    /* @__PURE__ */ i("p", {
+    className: "df-sig", children: [
       "say hi anytime ",
       /* @__PURE__ */ e("span", { className: "df-heart", "aria-hidden": "true", children: "♡" })
-    ] })
-  ] }, "p5"),
+    ]
+  })
+  ]
+}, "p5"),
   // spread 4 left: colophon
-  /* @__PURE__ */ i("div", { className: "df-page", children: [
+  /* @__PURE__ */ i("div", {
+  className: "df-page", children: [
     /* @__PURE__ */ e(pe, { className: "df-doodle df-doodle--mint", style: { top: 2, right: 6, width: 16, height: 16 } }),
     /* @__PURE__ */ e("h3", { className: "df-hello", children: "made by hand" }),
-    /* @__PURE__ */ e("div", { className: "df-card", children: /* @__PURE__ */ e(
+    /* @__PURE__ */ e("div", {
+    className: "df-card", children: /* @__PURE__ */ e(
       ue,
       {
         className: "df-edit--body",
         placeholder: "a little note…",
         initial: "This portfolio is a book you can actually open. It blooms apart, turns its pages on a spring, and shuts again — with a straw hat or two on the desk. Thanks for flipping through my little corner of the Grand Line."
       }
-    ) }),
-    /* @__PURE__ */ i("p", { className: "df-sig", children: [
+    )
+  }),
+    /* @__PURE__ */ i("p", {
+    className: "df-sig", children: [
       "thanks for the curiosity ",
       /* @__PURE__ */ e("span", { className: "df-heart", "aria-hidden": "true", children: "♡" })
-    ] })
-  ] }, "p6"),
+    ]
+  })
+  ]
+}, "p6"),
   // spread 4 right: closing finale
-  /* @__PURE__ */ i("div", { className: "df-page df-thanks", children: [
+  /* @__PURE__ */ i("div", {
+  className: "df-page df-thanks", children: [
     /* @__PURE__ */ e(pe, { className: "df-thanks-spark" }),
-    /* @__PURE__ */ i("p", { className: "df-thanks-title", children: [
+    /* @__PURE__ */ i("p", {
+    className: "df-thanks-title", children: [
       "thanks for reading ",
       /* @__PURE__ */ e("span", { className: "df-heart", "aria-hidden": "true", children: "♡" })
-    ] }),
+    ]
+  }),
     /* @__PURE__ */ e("span", { className: "df-thanks-sub", children: "let's make something" })
-  ] }, "p7")
+  ]
+}, "p7")
 ];
 function _t() {
-  return /* @__PURE__ */ i("div", { className: "ipod", children: [
-    /* @__PURE__ */ i("div", { className: "screen", children: [
+  return /* @__PURE__ */ i("div", {
+    className: "ipod", children: [
+    /* @__PURE__ */ i("div", {
+      className: "screen", children: [
       /* @__PURE__ */ e("div", { className: "battery" }),
-      /* @__PURE__ */ i("ul", { className: "menu", children: [
+      /* @__PURE__ */ i("ul", {
+        className: "menu", children: [
         /* @__PURE__ */ e("li", { className: "s", children: "Music" }),
         /* @__PURE__ */ e("li", { className: "s", children: "Extras" }),
         /* @__PURE__ */ e("li", { className: "s", children: "Settings" }),
         /* @__PURE__ */ e("li", { className: "active", children: "Shuffle Songs" }),
         /* @__PURE__ */ e("li", { children: "Backlight" })
-      ] })
-    ] }),
-    /* @__PURE__ */ i("div", { className: "clickwheel", children: [
+        ]
+      })
+      ]
+    }),
+    /* @__PURE__ */ i("div", {
+      className: "clickwheel", children: [
       /* @__PURE__ */ e("button", { type: "button", tabIndex: -1, className: "clickwheel-button menu-button", children: "Menu" }),
       /* @__PURE__ */ e("button", { type: "button", tabIndex: -1, className: "clickwheel-button rw", children: "≪" }),
       /* @__PURE__ */ e("button", { type: "button", tabIndex: -1, className: "clickwheel-button ff", children: "≫" }),
-      /* @__PURE__ */ i("button", { type: "button", tabIndex: -1, className: "clickwheel-button pp", children: [
+      /* @__PURE__ */ i("button", {
+        type: "button", tabIndex: -1, className: "clickwheel-button pp", children: [
         /* @__PURE__ */ e("span", { children: "▶" }),
-        "❚❚"
-      ] })
-    ] })
-  ] });
+          "❚❚"
+        ]
+      })
+      ]
+    })
+    ]
+  });
 }
 const Ue = { type: "spring", bounce: 0.22, duration: 0.55 };
 function z0() {
@@ -2516,7 +2808,7 @@ function z0() {
       const qe = (Tt) => {
         if (f) return;
         let Je = 0;
-        for (; Ge < ie.length && (Je < 4 || Tt.timeRemaining() > 8); )
+        for (; Ge < ie.length && (Je < 4 || Tt.timeRemaining() > 8);)
           C.push(pt(ie[Ge++])), Je += 1;
         Ge < ie.length ? X(qe, 3e3) : Re == null || Re();
       };
@@ -2586,7 +2878,7 @@ function z0() {
   }, [ee]);
   const L = $["stationery-polaroid"], P = $["dev-activity"], x = $["desk-lamp"], G = z(0), V = () => {
     let f;
-    for (; G.current < kt.length; ) {
+    for (; G.current < kt.length;) {
       const C = kt[G.current];
       if (G.current += 1, C.coverId !== A || C.bgId !== F) {
         f = C;
@@ -2608,297 +2900,359 @@ function z0() {
       f.push(null), f.push(C);
     return f;
   }, [Ne]);
-  return /* @__PURE__ */ i(et, { children: [
-    /* @__PURE__ */ e("section", { className: "deskfolio-live", children: /* @__PURE__ */ e(
-      "div",
-      {
-        className: "demo-stage deskfolio-demo-stage",
-        style: {
-          "--df-picker-w": `${u}px`,
-          "--df-stage-scale": v,
-          ...S.style
-        },
-        children: /* @__PURE__ */ i(Ct.Provider, { value: y, children: [
-          (ee || de) && /* @__PURE__ */ e(
-            "div",
-            {
-              className: "df-matmenu-backdrop",
-              "aria-hidden": "true",
-              onPointerDown: () => {
-                te(null), ce(!1);
-              }
-            }
-          ),
-          !k && /* @__PURE__ */ e(_0, {}),
+  return /* @__PURE__ */ i(et, {
+    children: [
+    /* @__PURE__ */ e("section", {
+      className: "deskfolio-live", children: /* @__PURE__ */ e(
+        "div",
+        {
+          className: "demo-stage deskfolio-demo-stage",
+          style: {
+            "--df-picker-w": `${u}px`,
+            "--df-stage-scale": v,
+            ...S.style
+          },
+          children: /* @__PURE__ */ i(Ct.Provider, {
+            value: y, children: [
+              (ee || de) && /* @__PURE__ */ e(
+                "div",
+                {
+                  className: "df-matmenu-backdrop",
+                  "aria-hidden": "true",
+                  onPointerDown: () => {
+                    te(null), ce(!1);
+                  }
+                }
+              ),
+              !k && /* @__PURE__ */ e(_0, {}),
           /* @__PURE__ */ i(
-            Q.div,
-            {
-              className: "df-pickers",
-              initial: !1,
-              animate: a ? { opacity: 1, y: 0, scale: 1 } : { opacity: n >= 3 ? 1 : 0, y: n >= 3 ? 0 : -14, scale: n >= 3 ? 1 : 0.96 },
-              transition: a ? { duration: 0 } : Ue,
-              children: [
-                /* @__PURE__ */ e(I0, { value: A, onChange: (f) => {
-                  Ce("selection"), Y(f);
-                } }),
-                /* @__PURE__ */ e(E0, { value: F, onChange: (f) => {
-                  Ce("selection"), fe(f);
-                } }),
-                /* @__PURE__ */ e(B0, { onShuffle: () => {
-                  Ce("nudge"), V();
-                } }),
-                !d && /* @__PURE__ */ e(s0, { value: R, onChange: (f) => {
-                  Ce("selection"), Ee(f);
-                } })
-              ]
-            }
-          ),
-          n >= 2 && !d && /* @__PURE__ */ e(v0, { setId: R, compact: d }),
-          n >= 2 && !d && oe.length > 0 && /* @__PURE__ */ e(w0, { added: oe }),
-          n >= 3 && !d && /* @__PURE__ */ e(
-            N0,
-            {
-              open: de,
-              onToggle: (f) => {
-                Ce("selection"), ce(f), f && te(null);
-              },
-              onAdd: (f) => {
-                Ce("nudge"), Le(f);
-              }
-            }
-          ),
-          n >= 2 && d && /* @__PURE__ */ i(et, { children: [
-            /* @__PURE__ */ i("div", { className: "df-mstickers", "aria-hidden": "true", children: [
+                Q.div,
+                {
+                  className: "df-pickers",
+                  initial: !1,
+                  animate: a ? { opacity: 1, y: 0, scale: 1 } : { opacity: n >= 3 ? 1 : 0, y: n >= 3 ? 0 : -14, scale: n >= 3 ? 1 : 0.96 },
+                  transition: a ? { duration: 0 } : Ue,
+                  children: [
+                /* @__PURE__ */ e(I0, {
+                    value: A, onChange: (f) => {
+                      Ce("selection"), Y(f);
+                    }
+                  }),
+                /* @__PURE__ */ e(E0, {
+                    value: F, onChange: (f) => {
+                      Ce("selection"), fe(f);
+                    }
+                  }),
+                /* @__PURE__ */ e(B0, {
+                    onShuffle: () => {
+                      Ce("nudge"), V();
+                    }
+                  }),
+                    !d && /* @__PURE__ */ e(s0, {
+                      value: R, onChange: (f) => {
+                        Ce("selection"), Ee(f);
+                      }
+                    })
+                  ]
+                }
+              ),
+              n >= 2 && !d && /* @__PURE__ */ e(v0, { setId: R, compact: d }),
+              n >= 2 && !d && oe.length > 0 && /* @__PURE__ */ e(w0, { added: oe }),
+              n >= 3 && !d && /* @__PURE__ */ e(
+                N0,
+                {
+                  open: de,
+                  onToggle: (f) => {
+                    Ce("selection"), ce(f), f && te(null);
+                  },
+                  onAdd: (f) => {
+                    Ce("nudge"), Le(f);
+                  }
+                }
+              ),
+              n >= 2 && d && /* @__PURE__ */ i(et, {
+                children: [
+            /* @__PURE__ */ i("div", {
+                  className: "df-mstickers", "aria-hidden": "true", children: [
               /* @__PURE__ */ e("img", { className: "m3", src: B + j[0], alt: "", decoding: "async" }),
               /* @__PURE__ */ e("img", { className: "m4", src: B + j[1], alt: "", decoding: "async" })
-            ] }),
+                  ]
+                }),
             /* @__PURE__ */ e("div", { className: "df-mipod", "aria-hidden": "true", children: /* @__PURE__ */ e(_t, {}) })
-          ] }),
-          /* @__PURE__ */ e(se, { children: !d && R === "stationery" && n >= 2 && !(L != null && L.deleted) && /* @__PURE__ */ e(
-            be,
-            {
-              objectKey: "stationery-polaroid",
-              editable: !0,
-              kind: "polaroid",
-              className: "df-sticker-dragger df-polaroid-dragger",
-              style: {
-                left: "17%",
-                top: "79.5%",
-                // Resize maps to --df-pol-scale, Tilt to --df-pol-rotate
-                ...((L == null ? void 0 : L.scale) ?? 1) !== 1 ? { "--df-pol-scale": 0.26 * ((L == null ? void 0 : L.scale) ?? 1) } : {},
-                ...((L == null ? void 0 : L.rotate) ?? 0) !== 0 ? { "--df-pol-rotate": `${-7 + ((L == null ? void 0 : L.rotate) ?? 0)}deg` } : {}
-              },
-              children: /* @__PURE__ */ e(
-                Q.div,
-                {
-                  className: "df-polaroid-mat",
-                  initial: a ? !1 : { opacity: 0, y: -26 },
-                  animate: a ? { opacity: 1 } : { opacity: 1, y: 0 },
-                  exit: a ? { opacity: 0 } : { opacity: 0, y: -16, transition: { duration: 0.18, ease: "easeIn" } },
-                  transition: a ? { duration: 0 } : { type: "spring", bounce: 0.4, duration: 0.6, delay: 0.14 },
-                  children: /* @__PURE__ */ e("div", { className: "df-polaroid-scale", children: /* @__PURE__ */ e(Pt, {}) })
-                }
-              )
-            },
-            "polaroid"
-          ) }),
-          !d && n >= 2 && !(P != null && P.deleted) && /* @__PURE__ */ e(
-            be,
-            {
-              objectKey: "dev-activity",
-              editable: !0,
-              kind: "device",
-              className: "df-sticker-dragger df-monitor-dragger",
-              title: "Open GitHub · hold to move",
-              style: {
-                // Workspace tucks it lower-left; other sets lower-right
-                left: R === "workspace" ? "2%" : "66.5%",
-                top: R === "workspace" ? "73%" : "80%",
-                "--df-monitor-scale": (P == null ? void 0 : P.scale) ?? (R === "workspace" ? 0.95 : 1),
-                "--df-monitor-rotate": `${(R === "workspace" ? -13 : -6) + ((P == null ? void 0 : P.rotate) ?? 0)}deg`
-              },
-              children: /* @__PURE__ */ e(
-                Q.div,
-                {
-                  className: "df-monitor-mat",
-                  initial: a ? !1 : { opacity: 0, y: -22 },
-                  animate: a ? { opacity: 1 } : { opacity: 1, y: 0 },
-                  transition: a ? { duration: 0 } : { type: "spring", bounce: 0.4, duration: 0.6, delay: 0.2 },
-                  children: /* @__PURE__ */ e(C0, { href: c })
-                }
-              )
-            }
-          ),
-          /* @__PURE__ */ e(
-            Q.div,
-            {
-              className: d ? "df-book-bloom df-book-bloom--mobile" : "df-book-bloom",
-              initial: !1,
-              animate: a ? { opacity: 1, y: 0, scale: 1 } : { opacity: n >= 1 ? 1 : 0, y: n >= 1 ? 0 : 12, scale: n >= 1 ? 1 : 0.94 },
-              transition: a ? { duration: 0 } : Ue,
-              children: d ? (
-                // phones: framed so only the right page shows
-                /* @__PURE__ */ e("div", { className: "df-mobile-scaler", style: { width: O.w, height: O.h }, children: /* @__PURE__ */ e("div", { className: "df-mobile-scaler-inner", style: { transform: `scale(${O.scale})`, left: -O.w }, children: /* @__PURE__ */ e(
-                  it,
+                ]
+              }),
+          /* @__PURE__ */ e(se, {
+                children: !d && R === "stationery" && n >= 2 && !(L != null && L.deleted) && /* @__PURE__ */ e(
+                  be,
                   {
-                    cover: ge,
-                    pages: At,
-                    closeOnEnd: !0,
-                    closedShift: "0%",
-                    pageWidth: O.pageW,
-                    pageHeight: O.pageH,
-                    style: mt(Z)
-                  }
-                ) }) })
-              ) : /* @__PURE__ */ e(
-                it,
+                    objectKey: "stationery-polaroid",
+                    editable: !0,
+                    kind: "polaroid",
+                    className: "df-sticker-dragger df-polaroid-dragger",
+                    style: {
+                      left: "17%",
+                      top: "79.5%",
+                      // Resize maps to --df-pol-scale, Tilt to --df-pol-rotate
+                      ...((L == null ? void 0 : L.scale) ?? 1) !== 1 ? { "--df-pol-scale": 0.26 * ((L == null ? void 0 : L.scale) ?? 1) } : {},
+                      ...((L == null ? void 0 : L.rotate) ?? 0) !== 0 ? { "--df-pol-rotate": `${-7 + ((L == null ? void 0 : L.rotate) ?? 0)}deg` } : {}
+                    },
+                    children: /* @__PURE__ */ e(
+                      Q.div,
+                      {
+                        className: "df-polaroid-mat",
+                        initial: a ? !1 : { opacity: 0, y: -26 },
+                        animate: a ? { opacity: 1 } : { opacity: 1, y: 0 },
+                        exit: a ? { opacity: 0 } : { opacity: 0, y: -16, transition: { duration: 0.18, ease: "easeIn" } },
+                        transition: a ? { duration: 0 } : { type: "spring", bounce: 0.4, duration: 0.6, delay: 0.14 },
+                        children: /* @__PURE__ */ e("div", { className: "df-polaroid-scale", children: /* @__PURE__ */ e(Pt, {}) })
+                      }
+                    )
+                  },
+                  "polaroid"
+                )
+              }),
+              !d && n >= 2 && !(P != null && P.deleted) && /* @__PURE__ */ e(
+                be,
                 {
-                  cover: ge,
-                  pages: Ne,
-                  backCover: we,
-                  closeOnEnd: !0,
-                  pageWidth: u,
-                  pageHeight: l,
-                  style: mt(Z)
+                  objectKey: "dev-activity",
+                  editable: !0,
+                  kind: "device",
+                  className: "df-sticker-dragger df-monitor-dragger",
+                  title: "Open GitHub · hold to move",
+                  style: {
+                    // Workspace tucks it lower-left; other sets lower-right
+                    left: R === "workspace" ? "2%" : "66.5%",
+                    top: R === "workspace" ? "73%" : "80%",
+                    "--df-monitor-scale": (P == null ? void 0 : P.scale) ?? (R === "workspace" ? 0.95 : 1),
+                    "--df-monitor-rotate": `${(R === "workspace" ? -13 : -6) + ((P == null ? void 0 : P.rotate) ?? 0)}deg`
+                  },
+                  children: /* @__PURE__ */ e(
+                    Q.div,
+                    {
+                      className: "df-monitor-mat",
+                      initial: a ? !1 : { opacity: 0, y: -22 },
+                      animate: a ? { opacity: 1 } : { opacity: 1, y: 0 },
+                      transition: a ? { duration: 0 } : { type: "spring", bounce: 0.4, duration: 0.6, delay: 0.2 },
+                      children: /* @__PURE__ */ e(C0, { href: c })
+                    }
+                  )
                 }
-              )
-            }
-          ),
-          /* @__PURE__ */ e(se, { children: !d && R === "workspace" && Me && !(x != null && x.deleted) && /* @__PURE__ */ e(
-            be,
-            {
-              objectKey: "desk-lamp",
-              editable: !0,
-              kind: "object",
-              className: "df-sticker-dragger df-lamp-dragger",
-              title: "Hold to edit lamp",
-              style: { width: f0(Me.width, (x == null ? void 0 : x.scale) ?? 1), ...Me.pos },
-              children: /* @__PURE__ */ e(
-                b0,
+              ),
+          /* @__PURE__ */ e(
+                Q.div,
                 {
-                  item: { ...Me, rotate: Me.rotate + ((x == null ? void 0 : x.rotate) ?? 0) },
-                  index: 0,
-                  on: b,
-                  onToggle: () => E((f) => !f),
-                  placed: !0
+                  className: d ? "df-book-bloom df-book-bloom--mobile" : "df-book-bloom",
+                  initial: !1,
+                  animate: a ? { opacity: 1, y: 0, scale: 1 } : { opacity: n >= 1 ? 1 : 0, y: n >= 1 ? 0 : 12, scale: n >= 1 ? 1 : 0.94 },
+                  transition: a ? { duration: 0 } : Ue,
+                  children: d ? (
+                // phones: framed so only the right page shows
+                /* @__PURE__ */ e("div", {
+                    className: "df-mobile-scaler", style: { width: O.w, height: O.h }, children: /* @__PURE__ */ e("div", {
+                      className: "df-mobile-scaler-inner", style: { transform: `scale(${O.scale})`, left: -O.w }, children: /* @__PURE__ */ e(
+                        it,
+                        {
+                          cover: ge,
+                          pages: At,
+                          closeOnEnd: !0,
+                          closedShift: "0%",
+                          pageWidth: O.pageW,
+                          pageHeight: O.pageH,
+                          style: mt(Z)
+                        }
+                      )
+                    })
+                  })
+                  ) : /* @__PURE__ */ e(
+                    it,
+                    {
+                      cover: ge,
+                      pages: Ne,
+                      backCover: we,
+                      closeOnEnd: !0,
+                      pageWidth: u,
+                      pageHeight: l,
+                      style: mt(Z)
+                    }
+                  )
                 }
-              )
-            },
-            "desk-lamp"
-          ) }),
-          !d && /* @__PURE__ */ e(se, { children: R === "workspace" && Me && !(x != null && x.deleted) && !b && n >= 2 && /* @__PURE__ */ i(
-            Q.div,
-            {
-              className: "df-lamp-hint",
-              "aria-hidden": "true",
-              initial: a ? !1 : { opacity: 0 },
-              animate: { opacity: 1 },
-              exit: a ? { opacity: 0 } : { opacity: 0, transition: { duration: 0.22, ease: "easeIn" } },
-              transition: a ? { duration: 0 } : { duration: 0.55, delay: 0.5 },
-              children: [
-                /* @__PURE__ */ i("span", { className: "df-lamp-hint-text", children: [
-                  "tap to",
+              ),
+          /* @__PURE__ */ e(se, {
+                children: !d && R === "workspace" && Me && !(x != null && x.deleted) && /* @__PURE__ */ e(
+                  be,
+                  {
+                    objectKey: "desk-lamp",
+                    editable: !0,
+                    kind: "object",
+                    className: "df-sticker-dragger df-lamp-dragger",
+                    title: "Hold to edit lamp",
+                    style: { width: f0(Me.width, (x == null ? void 0 : x.scale) ?? 1), ...Me.pos },
+                    children: /* @__PURE__ */ e(
+                      b0,
+                      {
+                        item: { ...Me, rotate: Me.rotate + ((x == null ? void 0 : x.rotate) ?? 0) },
+                        index: 0,
+                        on: b,
+                        onToggle: () => E((f) => !f),
+                        placed: !0
+                      }
+                    )
+                  },
+                  "desk-lamp"
+                )
+              }),
+              !d && /* @__PURE__ */ e(se, {
+                children: R === "workspace" && Me && !(x != null && x.deleted) && !b && n >= 2 && /* @__PURE__ */ i(
+                  Q.div,
+                  {
+                    className: "df-lamp-hint",
+                    "aria-hidden": "true",
+                    initial: a ? !1 : { opacity: 0 },
+                    animate: { opacity: 1 },
+                    exit: a ? { opacity: 0 } : { opacity: 0, transition: { duration: 0.22, ease: "easeIn" } },
+                    transition: a ? { duration: 0 } : { duration: 0.55, delay: 0.5 },
+                    children: [
+                /* @__PURE__ */ i("span", {
+                      className: "df-lamp-hint-text", children: [
+                        "tap to",
                   /* @__PURE__ */ e("br", {}),
-                  "light it!"
-                ] }),
-                /* @__PURE__ */ i("svg", { className: "df-lamp-hint-arrow", viewBox: "0 0 96 56", "aria-hidden": "true", children: [
+                        "light it!"
+                      ]
+                    }),
+                /* @__PURE__ */ i("svg", {
+                      className: "df-lamp-hint-arrow", viewBox: "0 0 96 56", "aria-hidden": "true", children: [
                   /* @__PURE__ */ e("path", { d: "M7 8C22 29 47 39 78 34" }),
                   /* @__PURE__ */ e("path", { d: "M69 24L80 34L66 42" })
-                ] })
-              ]
-            }
-          ) }),
-          !d && /* @__PURE__ */ e(
-            Q.div,
-            {
-              className: "df-tray-bloom",
-              initial: !1,
-              animate: a ? { opacity: 1, y: 0, scale: 1 } : { opacity: n >= 3 ? 1 : 0, y: n >= 3 ? 0 : 18, scale: n >= 3 ? 1 : 0.9 },
-              transition: a ? { duration: 0 } : { ...Ue, delay: n >= 3 ? 0.12 : 0 },
-              children: /* @__PURE__ */ e(n0, { panelWidth: Math.min(360, u) })
-            }
-          )
-        ] })
-      }
-    ) }),
-    // writeup + how-to removed: the desk is the whole page now
-    !1 && /* @__PURE__ */ i("div", { className: "tagline deskfolio-writeup", children: [
-      /* @__PURE__ */ i("div", { className: "df-writeup-intro", children: [
+                      ]
+                    })
+                    ]
+                  }
+                )
+              }),
+              !d && /* @__PURE__ */ e(
+                Q.div,
+                {
+                  className: "df-tray-bloom",
+                  initial: !1,
+                  animate: a ? { opacity: 1, y: 0, scale: 1 } : { opacity: n >= 3 ? 1 : 0, y: n >= 3 ? 0 : 18, scale: n >= 3 ? 1 : 0.9 },
+                  transition: a ? { duration: 0 } : { ...Ue, delay: n >= 3 ? 0.12 : 0 },
+                  children: /* @__PURE__ */ e(n0, { panelWidth: Math.min(360, u) })
+                }
+              )
+            ]
+          })
+        }
+      )
+    }),
+      // writeup + how-to removed: the desk is the whole page now
+      !1 && /* @__PURE__ */ i("div", {
+        className: "tagline deskfolio-writeup", children: [
+      /* @__PURE__ */ i("div", {
+          className: "df-writeup-intro", children: [
         /* @__PURE__ */ e("h1", { className: "df-writeup-name", children: "DeskFolio" }),
         /* @__PURE__ */ e("p", { className: "df-writeup-tagline", children: "A pocket-sized portfolio that opens like a book." }),
         /* @__PURE__ */ e("p", { className: "df-writeup-copy", children: "Built as a cute artist showcase with draggable desk pieces and editable stickers. What began as a journal idea quietly turned into a portfolio." }),
         /* @__PURE__ */ e("p", { className: "df-writeup-copy df-writeup-aside", children: "I was going to name it Cutefolio, but someone had already used it." })
-      ] }),
-      /* @__PURE__ */ i("div", { className: "df-writeup-pills", "aria-label": "Deskfolio notes", children: [
+          ]
+        }),
+      /* @__PURE__ */ i("div", {
+          className: "df-writeup-pills", "aria-label": "Deskfolio notes", children: [
         /* @__PURE__ */ e("span", { className: "df-writeup-pill df-writeup-pill--orange", children: "Long-press edits" }),
         /* @__PURE__ */ e("span", { className: "df-writeup-pill df-writeup-pill--green", children: "Freepik + hand-built assets" }),
         /* @__PURE__ */ e("span", { className: "df-writeup-pill df-writeup-pill--blue", children: "React + motion.dev" })
-      ] }),
-      /* @__PURE__ */ i("div", { className: "df-howto", children: [
-        /* @__PURE__ */ i("div", { className: "df-howto-frame", children: [
+          ]
+        }),
+      /* @__PURE__ */ i("div", {
+          className: "df-howto", children: [
+        /* @__PURE__ */ i("div", {
+            className: "df-howto-frame", children: [
           /* @__PURE__ */ e(
-            "img",
-            {
-              className: "df-howto-bear",
-              src: DF_BASE + "stickers/items/sticker-cutie-bear.svg",
-              width: 300,
-              height: 297,
-              loading: "lazy",
-              decoding: "async",
-              alt: "A bear sticker on the desk with the long-press edit menu floating above it"
-            }
-          ),
-          /* @__PURE__ */ i("div", { className: "df-howto-menu", "aria-hidden": "true", children: [
-            /* @__PURE__ */ i("span", { className: "df-howto-menu-row", children: [
+              "img",
+              {
+                className: "df-howto-bear",
+                src: DF_BASE + "stickers/items/sticker-cutie-bear.svg",
+                width: 300,
+                height: 297,
+                loading: "lazy",
+                decoding: "async",
+                alt: "A bear sticker on the desk with the long-press edit menu floating above it"
+              }
+            ),
+          /* @__PURE__ */ i("div", {
+              className: "df-howto-menu", "aria-hidden": "true", children: [
+            /* @__PURE__ */ i("span", {
+                className: "df-howto-menu-row", children: [
               /* @__PURE__ */ e(It, { className: "df-howto-menu-ico" }),
-              " Resize"
-            ] }),
-            /* @__PURE__ */ i("span", { className: "df-howto-menu-row", children: [
+                  " Resize"
+                ]
+              }),
+            /* @__PURE__ */ i("span", {
+                className: "df-howto-menu-row", children: [
               /* @__PURE__ */ e(St, { className: "df-howto-menu-ico" }),
-              " Replace"
-            ] }),
-            /* @__PURE__ */ i("span", { className: "df-howto-menu-row df-howto-menu-row--danger", children: [
+                  " Replace"
+                ]
+              }),
+            /* @__PURE__ */ i("span", {
+                className: "df-howto-menu-row df-howto-menu-row--danger", children: [
               /* @__PURE__ */ e(Lt, { className: "df-howto-menu-ico" }),
-              " Delete"
-            ] })
-          ] }),
-          /* @__PURE__ */ e("svg", { className: "df-howto-cursor", viewBox: "0 0 64 64", "aria-hidden": "true", children: /* @__PURE__ */ e(
-            "path",
-            {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M7.78696 6.09422C6.7281 5.68898 5.68898 6.7281 6.09422 7.78696L24.9891 57.1574C25.394 58.2154 26.8598 58.2962 27.3786 57.2892L36.7699 39.0589C37.2761 38.0763 38.0763 37.2761 39.0589 36.7699L57.2892 27.3786C58.2962 26.8598 58.2154 25.394 57.1574 24.9891L7.78696 6.09422ZM2.35847 9.21669C0.716609 4.92667 4.92668 0.716611 9.21669 2.35847L58.5871 21.2533C62.8737 22.8939 63.2012 28.8325 59.121 30.9345L40.8908 40.3258C40.6482 40.4507 40.4507 40.6482 40.3258 40.8908L30.9345 59.121C28.8325 63.2012 22.8939 62.8737 21.2533 58.5871L2.35847 9.21669Z",
-              fill: "currentColor"
-            }
-          ) })
-        ] }),
-        /* @__PURE__ */ i("div", { className: "df-howto-text", children: [
+                  " Delete"
+                ]
+              })
+              ]
+            }),
+          /* @__PURE__ */ e("svg", {
+              className: "df-howto-cursor", viewBox: "0 0 64 64", "aria-hidden": "true", children: /* @__PURE__ */ e(
+                "path",
+                {
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  d: "M7.78696 6.09422C6.7281 5.68898 5.68898 6.7281 6.09422 7.78696L24.9891 57.1574C25.394 58.2154 26.8598 58.2962 27.3786 57.2892L36.7699 39.0589C37.2761 38.0763 38.0763 37.2761 39.0589 36.7699L57.2892 27.3786C58.2962 26.8598 58.2154 25.394 57.1574 24.9891L7.78696 6.09422ZM2.35847 9.21669C0.716609 4.92667 4.92668 0.716611 9.21669 2.35847L58.5871 21.2533C62.8737 22.8939 63.2012 28.8325 59.121 30.9345L40.8908 40.3258C40.6482 40.4507 40.4507 40.6482 40.3258 40.8908L30.9345 59.121C28.8325 63.2012 22.8939 62.8737 21.2533 58.5871L2.35847 9.21669Z",
+                  fill: "currentColor"
+                }
+              )
+            })
+            ]
+          }),
+        /* @__PURE__ */ i("div", {
+            className: "df-howto-text", children: [
           /* @__PURE__ */ e("span", { className: "df-howto-eyebrow", children: "How to use" }),
-          /* @__PURE__ */ i("p", { children: [
-            "Press and hold any sticker or desk object and this little menu blooms up: ",
+          /* @__PURE__ */ i("p", {
+              children: [
+                "Press and hold any sticker or desk object and this little menu blooms up: ",
             /* @__PURE__ */ e("strong", { children: "Resize" }),
-            " to scale it, ",
+                " to scale it, ",
             /* @__PURE__ */ e("strong", { children: "Replace" }),
-            " to swap in a different sticker, or ",
+                " to swap in a different sticker, or ",
             /* @__PURE__ */ e("strong", { children: "Delete" }),
-            " to clear it off the desk."
-          ] }),
-          /* @__PURE__ */ i("p", { children: [
-            "Drag anything to move it around, and tap the ",
+                " to clear it off the desk."
+              ]
+            }),
+          /* @__PURE__ */ i("p", {
+              children: [
+                "Drag anything to move it around, and tap the ",
             /* @__PURE__ */ e("strong", { children: "+" }),
-            " button to add your own."
-          ] })
-        ] })
-      ] }),
-      /* @__PURE__ */ i("div", { className: "df-reference-strip", children: [
+                " button to add your own."
+              ]
+            })
+            ]
+          })
+          ]
+        }),
+      /* @__PURE__ */ i("div", {
+          className: "df-reference-strip", children: [
         /* @__PURE__ */ e("span", { className: "df-reference-title", children: "References" }),
-        /* @__PURE__ */ i("div", { className: "df-reference-pills", children: [
+        /* @__PURE__ */ i("div", {
+            className: "df-reference-pills", children: [
           /* @__PURE__ */ e("a", { href: "https://codepen.io/fossheim/pen/xxboBzO", target: "_blank", rel: "noreferrer", children: "Polaroid" }),
           /* @__PURE__ */ e("a", { href: "https://codepen.io/kreitlow/pen/mqgxYo", target: "_blank", rel: "noreferrer", children: "iPod Shuffle" })
-        ] })
-      ] })
-    ] })
-  ] });
+            ]
+          })
+          ]
+        })
+        ]
+      })
+    ]
+  });
 }
 function j0() {
   return /* @__PURE__ */ e("main", { className: "page page-bleed page-deskfolio", children: /* @__PURE__ */ e(z0, {}) });
