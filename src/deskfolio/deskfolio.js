@@ -2678,7 +2678,21 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
           /* @__PURE__ */ e("line", { x1: 10, y1: 14, x2: 21, y2: 3 })
           ]
         }),
-          " Protfolio"
+          " Portfolio"
+        ]
+      })
+    }),
+      /* @__PURE__ */ e("li", {
+      children: /* @__PURE__ */ i("a", {
+        className: "df-link", href: DF_BASE + "Anuj_Resume.pdf", download: "Anuj_Resume.pdf", target: "_blank", rel: "noreferrer", style: { background: "var(--df-blush-deep)", color: "#fff", border: "none" }, children: [
+        /* @__PURE__ */ i("svg", {
+          width: 16, height: 16, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", className: "df-icon", children: [
+          /* @__PURE__ */ e("path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" }),
+          /* @__PURE__ */ e("polyline", { points: "7 10 12 15 17 10" }),
+          /* @__PURE__ */ e("line", { x1: 12, y1: 15, x2: 12, y2: 3 })
+          ]
+        }),
+          " Download Anuj Resume"
         ]
       })
     })
