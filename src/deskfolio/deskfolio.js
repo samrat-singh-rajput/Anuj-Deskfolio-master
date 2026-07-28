@@ -2595,13 +2595,13 @@ const A0 = (t) => /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", fill: "curren
       ]
     }),
       /* @__PURE__ */ i("li", {
-      className: "df-xp-row", children: [
+      className: "df-xp-row", style: { marginTop: "0.55rem" }, children: [
         /* @__PURE__ */ e("span", { className: "df-xp-dot", "aria-hidden": "true" }),
         /* @__PURE__ */ i("div", {
         children: [
           /* @__PURE__ */ e("p", { className: "df-xp-role", children: "Certifications (Simplilearn)" }),
           /* @__PURE__ */ i("ul", {
-          style: { margin: "0.2rem 0 0", paddingLeft: "1rem", fontSize: "0.78rem", lineHeight: "1.35", color: "var(--df-ink-soft)", display: "flex", flexDirection: "column", gap: "0.15rem" }, children: [
+          style: { margin: "0.2rem 0 0", paddingLeft: "1rem", fontSize: "0.78rem", lineHeight: "1.35", color: "var(--df-ink-soft)", display: "flex", flexDirection: "column", gap: "0.12rem" }, children: [
             /* @__PURE__ */ e("li", { children: "Artificial Intelligence Beginners Guide" }),
             /* @__PURE__ */ e("li", { children: "Introduction to Cloud Computing" }),
             /* @__PURE__ */ e("li", { children: "Introduction to the Fundamentals of Databases" }),
